@@ -1,13 +1,13 @@
 <div align="center">
 
-<img src="docs/images/figurecraft-icon.svg" width="96" alt="FigureCraft icon">
-
-# FigureCraft
+<h1><img src="docs/images/figurecraft-icon.svg" width="64" alt="FigureCraft icon" align="center">&nbsp;&nbsp;FigureCraft</h1>
 
 ### Deterministic scientific charts and technical diagrams for AI coding agents
 
 Turn a structured **FigureSpec**, data, or a well-scoped prompt into an inspectable,
 reproducible figure—not a one-off generated image.
+
+**English** · [简体中文](README.zh-CN.md)
 
 [Quick start](#quick-start) · [Examples](#examples) · [Documentation](#documentation) · [Development](#development)
 
