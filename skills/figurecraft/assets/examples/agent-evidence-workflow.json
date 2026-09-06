@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "kind": "diagram.architecture",
+  "title": "Evidence-led agent collaboration",
+  "caption": "Plan in parallel; verify evidence before release. Dashed relations request another pass.",
+  "provenance": {
+    "type": "conceptual",
+    "summary": "Illustrative collaboration pattern, not a deployed platform or vendor reference."
+  },
+  "nodes": [
+    {"id": "request", "label": "User request", "subtitle": "Goal and acceptance criteria", "role": "actor", "layer": 0},
+    {"id": "context", "label": "Project context", "subtitle": "Documents and repository state", "role": "storage", "layer": 0},
+    {"id": "plan", "label": "Task planner", "subtitle": "Bounded tasks and dependencies", "role": "agent", "layer": 1},
+    {"id": "retrieve", "label": "Evidence retrieval", "subtitle": "Relevant passages and files", "role": "tool", "layer": 1},
+    {"id": "execute", "label": "Implementation agent", "subtitle": "Changes and execution results", "role": "agent", "layer": 2},
+    {"id": "research", "label": "Research agent", "subtitle": "Findings with source citations", "role": "agent", "layer": 2},
+    {"id": "review", "label": "Independent review", "subtitle": "Check evidence and acceptance", "role": "agent", "layer": 3},
+    {"id": "record", "label": "Evidence record", "subtitle": "Sources, outputs and limitations", "role": "artifact", "layer": 3},
+    {"id": "approve", "label": "Accept?", "subtitle": "Human decision", "role": "decision", "layer": 4},
+    {"id": "result", "label": "Reviewed response", "subtitle": "Answer and supporting artifacts", "role": "report", "layer": 5}
+  ],
+  "edges": [
+    {"id": "intent", "from": "request", "to": "plan", "label": "define task", "kind": "control"},
+    {"id": "lookup", "from": "context", "to": "retrieve", "label": "retrieve", "kind": "evidence"},
+    {"id": "delegation-research", "from": "plan", "to": "research", "label": "investigate", "kind": "control"},
+    {"id": "delegation-execute", "from": "plan", "to": "execute", "label": "implement", "kind": "control"},
+    {"id": "sources", "from": "retrieve", "to": "research", "label": "source context", "kind": "evidence"},
+    {"id": "findings", "from": "research", "to": "record", "label": "cite findings", "kind": "evidence"},
+    {"id": "candidate", "from": "execute", "to": "review", "label": "submit changes", "kind": "runtime"},
+    {"id": "grounding", "from": "record", "to": "review", "label": "support claims", "kind": "evidence"},
+    {"id": "decision", "from": "review", "to": "approve", "label": "recommend", "kind": "control"},
+    {"id": "accepted", "from": "approve", "to": "result", "label": "yes", "kind": "control"},
+    {"id": "retry", "from": "approve", "to": "plan", "label": "no: revise plan", "kind": "feedback", "style": "dashed", "source_port": "N", "target_port": "N"}
+  ],
+  "style": {
+    "preset": "editorial-contrast",
+    "visual_grammar": "semantic",
+    "overrides": {"font_size": 13}
+  },
+  "layout": {"direction": "LR", "medium": "web", "density": "comfortable", "margin": 48, "optimize": true},
+  "output": {"primary": "svg", "additional": ["drawio"]}
+}

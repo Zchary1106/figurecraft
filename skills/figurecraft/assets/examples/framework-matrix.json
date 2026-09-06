@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "kind": "diagram.framework-matrix",
+  "title": "Research and engineering workstreams",
+  "provenance": {"type": "conceptual", "summary": "Illustrative dependencies; not a measured project schedule."},
+  "phases": [{"id": "design", "title": "Design"}, {"id": "evaluate", "title": "Evaluate"}],
+  "tracks": [
+    {"id": "research", "title": "Research", "cells": [
+      {"id": "hypotheses", "phase": "design", "label": "Study hypotheses"},
+      {"id": "evidence", "phase": "evaluate", "label": "Evaluate evidence"}
+    ]},
+    {"id": "engineering", "title": "Engineering", "cells": [
+      {"id": "protocol", "phase": "design", "label": "Implement protocol"},
+      {"id": "reproduce", "phase": "evaluate", "label": "Reproduce results"}
+    ]}
+  ],
+  "cross_links": [{"from": "hypotheses", "to": "protocol", "label": "specifies"}, {"from": "evidence", "to": "reproduce", "label": "informs"}],
+  "integration": {"label": "Integrate evidence", "chips": ["Validity", "Reproducibility"]},
+  "outcome": {"label": "Documented contribution"},
+  "style": {"preset": "editorial-contrast"},
+  "layout": {"width": 950, "medium": "web"},
+  "output": {"primary": "svg", "additional": ["drawio"]}
+}

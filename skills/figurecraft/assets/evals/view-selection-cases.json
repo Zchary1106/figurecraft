@@ -1,0 +1,48 @@
+[
+  {
+    "prompt": "Give new contributors a README picture of who uses the product and its three main services.",
+    "expected_view": "system-context",
+    "max_primary_elements": 8
+  },
+  {
+    "prompt": "Show the deployable API, worker, scheduler, queue, and databases.",
+    "expected_view": "container",
+    "max_primary_elements": 15
+  },
+  {
+    "prompt": "Explain the internal modules of the scheduler service only.",
+    "expected_view": "component",
+    "scope": "scheduler"
+  },
+  {
+    "prompt": "Show namespaces, pods, nodes, regions, and persistent volumes.",
+    "expected_view": "deployment"
+  },
+  {
+    "prompt": "Explain what happens after a user submits a job, including retries and callbacks.",
+    "expected_view": "sequence"
+  },
+  {
+    "prompt": "Show how a trace is written to storage.",
+    "expected_view": "data-path",
+    "scenario": "write"
+  },
+  {
+    "prompt": "Show both the read and write paths of the storage service.",
+    "expected_view": "overview-plus-detail",
+    "required_details": ["read-path", "write-path"]
+  },
+  {
+    "prompt": "Show all business domains and the shared infrastructure in one engineering map.",
+    "expected_view": "system-landscape"
+  },
+  {
+    "prompt": "Draw every class, pod, API, database table, queue, and request step in one diagram.",
+    "expected_view": "overview-plus-detail",
+    "reject_single_canvas": true
+  },
+  {
+    "prompt": "Visualize a PyTorch model for publication.",
+    "expected_view": "computation-graph-plus-collapsed-publication-view"
+  }
+]

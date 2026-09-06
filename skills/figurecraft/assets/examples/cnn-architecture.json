@@ -1,0 +1,143 @@
+{
+  "version": "1.0",
+  "provenance": {"type": "conceptual", "summary": "Illustrative model plate; confirm executable topology against model code."},
+  "kind": "diagram.cnn-architecture",
+  "title": "Residual CNN for Visual Recognition",
+  "caption": "Stage-level architecture with tensor geometry and a representative bottleneck block",
+  "view": {
+    "type": "architecture-plate",
+    "audience": "academic"
+  },
+  "stages": [
+    {
+      "id": "input",
+      "title": "Input",
+      "label": "RGB Image",
+      "type": "tensor",
+      "spatial": [224, 224],
+      "channels": 3,
+      "operation": "Input tensor",
+      "color": "#7C8799",
+      "fill": "#F1F3F6"
+    },
+    {
+      "id": "stem",
+      "title": "Stem",
+      "label": "Conv 7×7",
+      "type": "tensor",
+      "spatial": [112, 112],
+      "channels": 64,
+      "operation": "Conv / s2 · BN · ReLU",
+      "transition": "↓2"
+    },
+    {
+      "id": "stage1",
+      "title": "Stage 1",
+      "label": "Bottleneck",
+      "type": "tensor",
+      "spatial": [56, 56],
+      "channels": 256,
+      "repeat": 3,
+      "operation": "Residual block",
+      "transition": "MaxPool ↓2"
+    },
+    {
+      "id": "stage2",
+      "title": "Stage 2",
+      "label": "Bottleneck",
+      "type": "tensor",
+      "spatial": [28, 28],
+      "channels": 512,
+      "repeat": 4,
+      "operation": "Residual block",
+      "transition": "↓2 · C×2"
+    },
+    {
+      "id": "stage3",
+      "title": "Stage 3",
+      "label": "Bottleneck",
+      "type": "tensor",
+      "spatial": [14, 14],
+      "channels": 1024,
+      "repeat": 6,
+      "operation": "Residual block",
+      "transition": "↓2 · C×2"
+    },
+    {
+      "id": "stage4",
+      "title": "Stage 4",
+      "label": "Bottleneck",
+      "type": "tensor",
+      "spatial": [7, 7],
+      "channels": 2048,
+      "repeat": 3,
+      "operation": "Residual block",
+      "transition": "↓2 · C×2"
+    },
+    {
+      "id": "pool",
+      "title": "Head",
+      "label": "Global Pool",
+      "subtitle": "2048-d vector",
+      "type": "operator",
+      "width": 132,
+      "height": 68,
+      "operation": "Spatial average",
+      "transition": "7×7 → 1×1"
+    },
+    {
+      "id": "output",
+      "title": "Prediction",
+      "label": "Linear + Softmax",
+      "subtitle": "Class probabilities",
+      "type": "operator",
+      "width": 144,
+      "height": 68,
+      "operation": "1000-way classifier",
+      "transition": "FC"
+    }
+  ],
+  "block_detail": {
+    "title": "Residual Bottleneck — representative block",
+    "subtitle": "The projection shortcut is used only when shape or stride changes",
+    "steps": [
+      {
+        "label": "1×1 Conv",
+        "subtitle": "reduce C → C/4"
+      },
+      {
+        "label": "3×3 Conv",
+        "subtitle": "spatial mixing"
+      },
+      {
+        "label": "1×1 Conv",
+        "subtitle": "expand C/4 → C"
+      }
+    ],
+    "residual": true,
+    "output": "ReLU"
+  },
+  "note": "Tensor face area encodes spatial scale; prism depth encodes channels on a log scale.",
+  "style": {
+    "preset": "cnn-paper"
+  },
+  "layout": {
+    "width": 1680,
+    "height": 690,
+    "margin": 48,
+    "main_y": 235,
+    "inset_x": 170,
+    "inset_y": 430,
+    "inset_width": 1040,
+    "inset_height": 210
+  },
+  "output": {
+    "primary": "svg",
+    "additional": ["drawio"]
+  },
+  "assumptions": [
+    "This is an original stage-level residual CNN plate used to demonstrate FigureCraft",
+    "The block grammar is inspired by recurring conventions in public ResNet, ConvNeXt, MobileNetV2, and MaxViT figures without copying their composition",
+    "Batch normalization and ReLU are summarized at stage level except in the representative block"
+  ]
+}

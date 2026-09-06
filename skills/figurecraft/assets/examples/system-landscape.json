@@ -1,0 +1,202 @@
+{
+  "version": "1.0",
+  "provenance": {"type": "conceptual", "summary": "Example system landscape; not a vendor standard or deployed product."},
+  "kind": "diagram.system-landscape",
+  "title": "AI Research Collaboration Platform",
+  "caption": "Service boundaries, agent runtime, and shared infrastructure",
+  "view": {"type": "system-landscape", "audience": "engineering"},
+  "zones": [
+    {
+      "id": "backend",
+      "title": "Backend Service",
+      "subtitle": "Go · Gin · GORM",
+      "row": 0,
+      "column": 0,
+      "span": 6,
+      "sections": [
+        {
+          "title": "HTTP APIs",
+          "icon": "api",
+          "subtitle": "Product-facing endpoints",
+          "tone": "blue",
+          "columns": 4,
+          "items": [
+            {"label": "Projects", "subtitle": "Members · Assets"},
+            {"label": "Experiments", "subtitle": "Runs · Metrics"},
+            {"label": "Figures", "subtitle": "Specs · Exports"},
+            {"label": "Skills", "subtitle": "Registry · CRUD"}
+          ]
+        },
+        {
+          "title": "Security & Runtime",
+          "icon": "security",
+          "tone": "neutral",
+          "columns": 4,
+          "items": [
+            {"label": "JWT Auth", "subtitle": "Access tokens"},
+            {"label": "RBAC", "subtitle": "Policy checks"},
+            {"label": "Rate Limit", "subtitle": "Quota"},
+            {"label": "Sandbox", "subtitle": "Isolated jobs"}
+          ]
+        },
+        {
+          "title": "Domain Logic",
+          "icon": "workflow",
+          "tone": "green",
+          "columns": 4,
+          "items": [
+            {"label": "Project"},
+            {"label": "Experiment"},
+            {"label": "Dataset"},
+            {"label": "Artifact"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agent-core",
+      "title": "Agent Core",
+      "subtitle": "Python · gRPC · Agent SDK",
+      "row": 0,
+      "column": 6,
+      "span": 6,
+      "sections": [
+        {
+          "title": "Reasoning & Planning",
+          "icon": "model",
+          "tone": "purple",
+          "columns": 3,
+          "items": [
+            {"label": "Planner", "subtitle": "Task graph"},
+            {"label": "LLM Hub", "subtitle": "Routing"},
+            {"label": "Critic", "subtitle": "Review loop"}
+          ]
+        },
+        {
+          "title": "Execution & Tools",
+          "icon": "engine",
+          "tone": "orange",
+          "columns": 4,
+          "items": [
+            {"label": "Toolbox"},
+            {"label": "Task Runtime"},
+            {"label": "Skills"},
+            {"label": "Figure Engine"}
+          ],
+          "note": "Built-ins: search · code · data · browser · visualization"
+        },
+        {
+          "title": "Memory & Context",
+          "icon": "storage",
+          "tone": "teal",
+          "columns": 4,
+          "items": [
+            {"label": "Long Memory"},
+            {"label": "Workspace"},
+            {"label": "Knowledge"},
+            {"label": "Traces"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "title": "Infrastructure",
+      "subtitle": "Shared data, messaging, models, and deployment",
+      "row": 1,
+      "column": 0,
+      "span": 12,
+      "section_columns": 3,
+      "sections": [
+        {
+          "title": "Data & Storage",
+          "icon": "data",
+          "tone": "neutral",
+          "columns": 3,
+          "items": [
+            {"label": "PostgreSQL"},
+            {"label": "Redis"},
+            {"label": "Object Store"}
+          ]
+        },
+        {
+          "title": "Messaging",
+          "icon": "queue",
+          "tone": "green",
+          "columns": 2,
+          "items": [
+            {"label": "Kafka"},
+            {"label": "Event Bus"}
+          ]
+        },
+        {
+          "title": "Knowledge",
+          "icon": "artifact",
+          "tone": "blue",
+          "columns": 2,
+          "items": [
+            {"label": "Vector DB"},
+            {"label": "Doc Parser"}
+          ]
+        },
+        {
+          "title": "Sandbox",
+          "icon": "security",
+          "tone": "orange",
+          "columns": 2,
+          "items": [
+            {"label": "Containers"},
+            {"label": "GPU Jobs"}
+          ]
+        },
+        {
+          "title": "Model Providers",
+          "icon": "model",
+          "tone": "purple",
+          "columns": 3,
+          "items": [
+            {"label": "OpenAI"},
+            {"label": "Anthropic"},
+            {"label": "Gemini"}
+          ]
+        },
+        {
+          "title": "Deployment",
+          "icon": "distribution",
+          "tone": "neutral",
+          "columns": 2,
+          "items": [
+            {"label": "Docker"},
+            {"label": "Kubernetes"}
+          ]
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "backend",
+      "to": "agent-core",
+      "label": "gRPC",
+      "from_anchor": 0.38,
+      "to_anchor": 0.38
+    },
+    {
+      "from": "backend",
+      "to": "infrastructure",
+      "label": "Data · Sandbox",
+      "from_anchor": 0.30,
+      "to_anchor": 0.20
+    },
+    {
+      "from": "agent-core",
+      "to": "infrastructure",
+      "label": "Models · Events",
+      "from_anchor": 0.70,
+      "to_anchor": 0.78
+    }
+  ],
+  "style": {"preset": "technical-landscape"},
+  "layout": {"width": 1600, "gap": 56, "margin": 24},
+  "output": {"primary": "svg", "additional": ["drawio"]}
+}

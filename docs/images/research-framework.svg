@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="895.8" viewBox="0 0 900 895.8" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">Evidence-grounded research</title>
+<desc id="figure-desc">Research framework with 3 stages</desc>
+<defs>
+<marker id="framework-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#635D54"/></marker>
+<filter id="framework-panel-shadow" x="-10%" y="-12%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#292620" flood-opacity="0.09"/></filter>
+<filter id="framework-card-shadow" x="-12%" y="-15%" width="124%" height="135%"><feDropShadow dx="0" dy="1.5" stdDeviation="2.2" flood-color="#292620" flood-opacity="0.07"/></filter>
+<linearGradient id="framework-canvas" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ECE6DA"/><stop offset="100%" stop-color="#F4F0E7"/></linearGradient>
+<linearGradient id="framework-outcome" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#EEE4C9"/><stop offset="100%" stop-color="#FFFDF8"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="900" height="832" fill="url(#framework-canvas)"/>
+<rect x="58.0" y="18" width="5" height="26.6" rx="2.5" fill="#B4552A"/>
+<text x="76.00" y="31.30" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="19" font-weight="bold" fill="#292620" data-text-box="76.00,18.00,277.55,26.60" data-text-container="76.00,18.00,766.00,26.60" data-text-background="#F4F0E7">Evidence-grounded research</text>
+<path d="M 450.0 230.0 V 282.0" fill="none" stroke="#635D54" stroke-width="1.8" marker-end="url(#framework-arrow)"/>
+<path d="M 450.0 426.0 V 478.0" fill="none" stroke="#635D54" stroke-width="1.8" marker-end="url(#framework-arrow)"/>
+<rect x="58.0" y="88.0" width="784.0" height="142.0" rx="20" fill="#DCE7EC" fill-opacity="0.30" stroke="#315F83" stroke-opacity="0.50" stroke-width="1.3" filter="url(#framework-panel-shadow)"/>
+<circle cx="81.0" cy="112.0" r="12" fill="#315F83"/>
+<text x="81.0" y="112.5" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="9" font-weight="700">01</text>
+<text x="102.00" y="117.50" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#315F83" data-text-box="102.00,108.40,123.31,18.20" data-text-container="102.00,98.00,720.00,39.00" data-text-background="#FFFDF8">Research question</text>
+<rect x="78.0" y="147.0" width="363.0" height="66.0" rx="13.0" fill="#FFFDF8" stroke="#315F83" stroke-width="1.3" filter="url(#framework-card-shadow)"/>
+<text x="259.50" y="171.34" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#292620" data-text-box="223.19,163.64,72.63,15.40" data-text-container="92.00,157.00,335.00,46.00" data-text-background="#FFFDF8">Define scope</text>
+<text x="259.50" y="190.20" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8.8" font-weight="normal" fill="#6B6459" data-text-box="212.25,184.04,94.51,12.32" data-text-container="92.00,157.00,335.00,46.00" data-text-background="#FFFDF8">Population and context</text>
+<rect x="459.0" y="147.0" width="363.0" height="66.0" rx="13.0" fill="#FFFDF8" stroke="#315F83" stroke-width="1.3" filter="url(#framework-card-shadow)"/>
+<text x="640.50" y="171.34" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#292620" data-text-box="593.80,163.64,93.40,15.40" data-text-container="473.00,157.00,335.00,46.00" data-text-background="#FFFDF8">State hypothesis</text>
+<text x="640.50" y="190.20" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8.8" font-weight="normal" fill="#6B6459" data-text-box="604.92,184.04,71.17,12.32" data-text-container="473.00,157.00,335.00,46.00" data-text-background="#FFFDF8">A falsifiable claim</text>
+<rect x="58.0" y="284.0" width="784.0" height="142.0" rx="20" fill="#DCE8DF" fill-opacity="0.30" stroke="#477A62" stroke-opacity="0.50" stroke-width="1.3" filter="url(#framework-panel-shadow)"/>
+<circle cx="81.0" cy="308.0" r="12" fill="#477A62"/>
+<text x="81.0" y="308.5" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="9" font-weight="700">02</text>
+<text x="102.00" y="313.50" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#477A62" data-text-box="102.00,304.40,86.51,18.20" data-text-container="102.00,294.00,720.00,39.00" data-text-background="#FFFDF8">Study design</text>
+<path d="M 441.0 376.0 H 457.0" fill="none" stroke="#635D54" stroke-width="1.4" marker-end="url(#framework-arrow)"/>
+<rect x="78.0" y="343.0" width="363.0" height="66.0" rx="13.0" fill="#DCE8DF" stroke="#477A62" stroke-width="1.3" filter="url(#framework-card-shadow)"/>
+<text x="259.50" y="367.34" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#292620" data-text-box="216.72,359.64,85.56,15.40" data-text-container="92.00,353.00,335.00,46.00" data-text-background="#DCE8DF">Define protocol</text>
+<text x="259.50" y="386.20" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8.8" font-weight="normal" fill="#6B6459" data-text-box="212.52,380.04,93.96,12.32" data-text-container="92.00,353.00,335.00,46.00" data-text-background="#DCE8DF">Measures and controls</text>
+<rect x="459.0" y="343.0" width="363.0" height="66.0" rx="13.0" fill="#DCE8DF" stroke="#477A62" stroke-width="1.3" filter="url(#framework-card-shadow)"/>
+<text x="640.50" y="367.34" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#292620" data-text-box="583.11,359.64,114.78,15.40" data-text-container="473.00,353.00,335.00,46.00" data-text-background="#DCE8DF">Collect observations</text>
+<text x="640.50" y="386.20" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8.8" font-weight="normal" fill="#6B6459" data-text-box="599.97,380.04,81.06,12.32" data-text-container="473.00,353.00,335.00,46.00" data-text-background="#DCE8DF">Record provenance</text>
+<rect x="58.0" y="480.0" width="784.0" height="142.0" rx="20" fill="#F1DED2" fill-opacity="0.30" stroke="#B4552A" stroke-opacity="0.50" stroke-width="1.3" filter="url(#framework-panel-shadow)"/>
+<circle cx="81.0" cy="504.0" r="12" fill="#B4552A"/>
+<text x="81.0" y="504.5" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="9" font-weight="700">03</text>
+<text x="102.00" y="509.50" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#B4552A" data-text-box="102.00,500.40,56.69,18.20" data-text-container="102.00,490.00,720.00,39.00" data-text-background="#FFFDF8">Analysis</text>
+<rect x="78.0" y="539.0" width="363.0" height="66.0" rx="13.0" fill="#F1DED2" stroke="#B4552A" stroke-width="1.3" filter="url(#framework-card-shadow)"/>
+<text x="259.50" y="563.34" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#292620" data-text-box="214.72,555.64,89.55,15.40" data-text-container="92.00,549.00,335.00,46.00" data-text-background="#F1DED2">Estimate effects</text>
+<text x="259.50" y="582.20" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8.8" font-weight="normal" fill="#101722" data-text-box="219.50,576.04,80.00,12.32" data-text-container="92.00,549.00,335.00,46.00" data-text-background="#F1DED2">Declare uncertainty</text>
+<rect x="459.0" y="539.0" width="363.0" height="66.0" rx="13.0" fill="#F1DED2" stroke="#B4552A" stroke-width="1.3" filter="url(#framework-card-shadow)"/>
+<text x="640.50" y="563.34" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#292620" data-text-box="589.26,555.64,102.49,15.40" data-text-container="473.00,549.00,335.00,46.00" data-text-background="#F1DED2">Assess limitations</text>
+<text x="640.50" y="582.20" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8.8" font-weight="normal" fill="#101722" data-text-box="590.44,576.04,100.12,12.32" data-text-container="473.00,549.00,335.00,46.00" data-text-background="#F1DED2">Bias and generalizability</text>
+<path d="M 450.0 622.0 V 681.0" fill="none" stroke="#635D54" stroke-width="1.8" marker-end="url(#framework-arrow)"/>
+<rect x="255.0" y="684.0" width="390.0" height="78.0" rx="39.0" fill="url(#framework-outcome)" stroke="#9A741B" stroke-width="2" filter="url(#framework-panel-shadow)"/>
+<rect x="260.0" y="689.0" width="380.0" height="68.0" rx="34.0" fill="none" stroke="#9A741B" stroke-opacity="0.34" stroke-width="1"/>
+<text x="450.00" y="714.06" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12.5" font-weight="bold" fill="#292620" data-text-box="376.39,705.31,147.22,17.50" data-text-container="279.00,699.00,342.00,48.00" data-text-background="#FFFDF8">Supported contribution</text>
+<text x="450.00" y="734.25" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.2" font-weight="normal" fill="#6B6459" data-text-box="367.97,727.81,164.07,12.88" data-text-container="279.00,699.00,342.00,48.00" data-text-background="#FFFDF8">Separate evidence from interpretation</text>
+<g id="figure-provenance"><rect x="0" y="832" width="900" height="63.8" fill="#F4F0E7"/>
+<text x="24.00" y="851.70" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#292620" data-text-box="24.00,844.00,126.42,15.40" data-text-container="24.00,844.00,852.00,35.80" data-text-background="#F4F0E7">Conceptual illustration</text>
+<text x="24.00" y="872.10" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="normal" fill="#6B6459" data-text-box="24.00,864.40,404.56,15.40" data-text-container="24.00,844.00,852.00,35.80" data-text-background="#F4F0E7">Methodology example; evidence and findings must come from an actual study.</text>
+</g>
+</svg>

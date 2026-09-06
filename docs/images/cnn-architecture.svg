@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2007" height="753" viewBox="0 0 2007 753" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">Residual CNN for Visual Recognition</title>
+<desc id="figure-desc">Stage-level architecture with tensor geometry and a representative bottleneck block</desc>
+<defs>
+<marker id="cnn-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5D697A"/></marker>
+<filter id="cnn-shadow" x="-20%" y="-20%" width="145%" height="155%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#172033" flood-opacity="0.11"/></filter>
+<linearGradient id="cnn-canvas" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F7F9FC"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="2007" height="692" fill="url(#cnn-canvas)"/>
+<rect x="48.0" y="18" width="5" height="49.8" rx="2.5" fill="#3569E8"/>
+<text x="66.00" y="32.70" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="21" font-weight="bold" fill="#172033" data-text-box="66.00,18.00,389.25,29.40" data-text-container="66.00,18.00,1892.71,49.80" data-text-background="#FFFFFF">Residual CNN for Visual Recognition</text>
+<text x="66.00" y="60.10" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="normal" fill="#667085" data-text-box="66.00,52.40,430.79,15.40" data-text-container="66.00,18.00,1892.71,49.80" data-text-background="#FFFFFF">Stage-level architecture with tensor geometry and a representative bottleneck block</text>
+<rect x="55.0" y="91.8" width="224.8" height="284.2" rx="16" fill="#F1F3F6" opacity="0.20"/>
+<text x="167.42" y="110.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#172033" data-text-box="150.59,101.80,33.66,18.20" data-text-container="60.00,101.80,214.84,18.20" data-text-background="#FFFFFF">Input</text>
+<g data-stage-id="input" filter="url(#cnn-shadow)">
+<polygon points="118.5,172.0 125.7,167.5 216.4,167.5 209.2,172.0" fill="#F1F3F6" stroke="#7C8799" stroke-width="1.2" opacity="0.82"/>
+<polygon points="209.2,172.0 216.4,167.5 216.4,293.5 209.2,298.0" fill="#7C8799" stroke="#7C8799" stroke-width="1.2" opacity="0.28"/>
+<rect x="118.5" y="172.0" width="90.7" height="126.0" rx="5" fill="#F1F3F6" stroke="#7C8799" stroke-width="1.5"/>
+<path d="M 124.5 180.0 H 203.2" stroke="#7C8799" stroke-width="2.4" opacity="0.75"/>
+<text x="163.82" y="237.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#172033" data-text-box="132.38,229.30,62.87,15.40" data-text-container="126.46,186.00,74.72,102.00" data-text-background="#F1F3F6">RGB Image</text>
+</g>
+<text x="167.42" y="337.85" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#172033" data-text-box="135.23,330.50,64.38,14.70" data-text-container="60.00,325.00,214.84,44.00" data-text-background="#FFFFFF">Input tensor</text>
+<text x="167.42" y="356.85" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="normal" fill="#667085" data-text-box="141.95,350.20,50.95,13.30" data-text-container="60.00,325.00,214.84,44.00" data-text-background="#FFFFFF">224×224×3</text>
+<rect x="293.8" y="91.8" width="224.8" height="284.2" rx="16" fill="#ECF8F3" opacity="0.20"/>
+<text x="406.26" y="110.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#172033" data-text-box="389.41,101.80,33.70,18.20" data-text-container="298.84,101.80,214.84,18.20" data-text-background="#FFFFFF">Stem</text>
+<g data-stage-id="stem" filter="url(#cnn-shadow)">
+<polygon points="358.8,178.8 372.8,170.1 453.7,170.1 439.7,178.8" fill="#ECF8F3" stroke="#169B78" stroke-width="1.2" opacity="0.82"/>
+<polygon points="439.7,178.8 453.7,170.1 453.7,282.5 439.7,291.2" fill="#169B78" stroke="#169B78" stroke-width="1.2" opacity="0.28"/>
+<rect x="358.8" y="178.8" width="80.9" height="112.4" rx="5" fill="#ECF8F3" stroke="#169B78" stroke-width="1.5"/>
+<path d="M 364.8 186.8 H 433.7" stroke="#169B78" stroke-width="2.4" opacity="0.75"/>
+<text x="399.28" y="237.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#172033" data-text-box="373.19,229.30,52.19,15.40" data-text-container="366.82,192.80,64.93,88.40" data-text-background="#ECF8F3">Conv 7×7</text>
+</g>
+<text x="406.26" y="334.45" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#172033" data-text-box="349.03,327.10,114.46,14.70" data-text-container="298.84,318.20,214.84,50.80" data-text-background="#FFFFFF">Conv / s2 · BN · ReLU</text>
+<text x="406.26" y="353.45" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="normal" fill="#667085" data-text-box="378.78,346.80,54.95,13.30" data-text-container="298.84,318.20,214.84,50.80" data-text-background="#FFFFFF">112×112×64</text>
+<rect x="532.7" y="91.8" width="224.8" height="284.2" rx="16" fill="#FFF3E4" opacity="0.20"/>
+<text x="645.10" y="110.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#172033" data-text-box="620.58,101.80,49.03,18.20" data-text-container="537.68,101.80,214.84,18.20" data-text-background="#FFFFFF">Stage 1</text>
+<g data-stage-id="stage1" filter="url(#cnn-shadow)">
+<polygon points="601.0,185.6 618.0,175.0 689.2,175.0 672.2,185.6" fill="#FFF3E4" stroke="#E99525" stroke-width="1.2" opacity="0.82"/>
+<polygon points="672.2,185.6 689.2,175.0 689.2,273.8 672.2,284.4" fill="#E99525" stroke="#E99525" stroke-width="1.2" opacity="0.28"/>
+<rect x="601.0" y="185.6" width="71.1" height="98.8" rx="5" fill="#FFF3E4" stroke="#E99525" stroke-width="1.5"/>
+<path d="M 607.0 193.6 H 666.2" stroke="#E99525" stroke-width="2.4" opacity="0.75"/>
+<text x="636.59" y="229.30" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#172033" data-text-box="610.01,221.60,53.17,15.40" data-text-container="609.02,199.60,55.14,74.80" data-text-background="#FFF3E4">Bottlenec</text>
+<text x="636.59" y="244.70" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#172033" data-text-box="633.34,237.00,6.49,15.40" data-text-container="609.02,199.60,55.14,74.80" data-text-background="#FFF3E4">k</text>
+</g>
+<text x="645.10" y="331.05" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#172033" data-text-box="605.78,323.70,78.62,14.70" data-text-container="537.68,311.40,214.84,57.60" data-text-background="#FFFFFF">Residual block</text>
+<text x="645.10" y="350.05" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="normal" fill="#667085" data-text-box="619.62,343.40,50.95,13.30" data-text-container="537.68,311.40,214.84,57.60" data-text-background="#FFFFFF">56×56×256</text>
+<rect x="653.2" y="153.0" width="40" height="22" rx="11" fill="#FFFFFF" stroke="#E99525" stroke-width="1.1"/>
+<text x="673.2" y="164.5" dominant-baseline="middle" text-anchor="middle" fill="#E99525" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="10" font-weight="700">×3</text>
+<rect x="771.5" y="91.8" width="224.8" height="284.2" rx="16" fill="#F3EEFF" opacity="0.20"/>
+<text x="883.93" y="110.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#172033" data-text-box="859.42,101.80,49.03,18.20" data-text-container="776.52,101.80,214.84,18.20" data-text-background="#FFFFFF">Stage 2</text>
+<g data-stage-id="stage2" filter="url(#cnn-shadow)">
+<polygon points="840.7,192.4 859.2,180.8 927.2,180.8 908.7,192.4" fill="#F3EEFF" stroke="#815AC0" stroke-width="1.2" opacity="0.82"/>
+<polygon points="908.7,192.4 927.2,180.8 927.2,266.0 908.7,277.6" fill="#815AC0" stroke="#815AC0" stroke-width="1.2" opacity="0.28"/>
+<rect x="840.7" y="192.4" width="68.0" height="85.2" rx="5" fill="#F3EEFF" stroke="#815AC0" stroke-width="1.5"/>
+<path d="M 846.7 200.4 H 902.7" stroke="#815AC0" stroke-width="2.4" opacity="0.75"/>
+<text x="874.66" y="229.30" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#172033" data-text-box="851.33,221.60,46.67,15.40" data-text-container="848.66,206.40,52.00,61.20" data-text-background="#F3EEFF">Bottlene</text>
+<text x="874.66" y="244.70" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#172033" data-text-box="868.17,237.00,12.99,15.40" data-text-container="848.66,206.40,52.00,61.20" data-text-background="#F3EEFF">ck</text>
+</g>
+<text x="883.93" y="327.65" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#172033" data-text-box="844.62,320.30,78.62,14.70" data-text-container="776.52,304.60,214.84,64.40" data-text-background="#FFFFFF">Residual block</text>
+<text x="883.93" y="346.65" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="normal" fill="#667085" data-text-box="858.46,340.00,50.95,13.30" data-text-container="776.52,304.60,214.84,64.40" data-text-background="#FFFFFF">28×28×512</text>
+<rect x="891.2" y="158.8" width="40" height="22" rx="11" fill="#FFFFFF" stroke="#815AC0" stroke-width="1.1"/>
+<text x="911.2" y="170.3" dominant-baseline="middle" text-anchor="middle" fill="#815AC0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="10" font-weight="700">×4</text>
+<rect x="1010.4" y="91.8" width="224.8" height="284.2" rx="16" fill="#FFF0F3" opacity="0.20"/>
+<text x="1122.77" y="110.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#172033" data-text-box="1098.26,101.80,49.03,18.20" data-text-container="1015.35,101.80,214.84,18.20" data-text-background="#FFFFFF">Stage 3</text>
+<g data-stage-id="stage3" filter="url(#cnn-shadow)">
+<polygon points="1078.7,199.2 1098.8,186.7 1166.8,186.7 1146.7,199.2" fill="#FFF0F3" stroke="#D95670" stroke-width="1.2" opacity="0.82"/>
+<polygon points="1146.7,199.2 1166.8,186.7 1166.8,258.3 1146.7,270.8" fill="#D95670" stroke="#D95670" stroke-width="1.2" opacity="0.28"/>
+<rect x="1078.7" y="199.2" width="68.0" height="71.6" rx="5" fill="#FFF0F3" stroke="#D95670" stroke-width="1.5"/>
+<path d="M 1084.7 207.2 H 1140.7" stroke="#D95670" stroke-width="2.4" opacity="0.75"/>
+<text x="1112.74" y="229.30" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#172033" data-text-box="1089.40,221.60,46.67,15.40" data-text-container="1086.74,213.20,52.00,47.60" data-text-background="#FFF0F3">Bottlene</text>
+<text x="1112.74" y="244.70" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#172033" data-text-box="1106.25,237.00,12.99,15.40" data-text-container="1086.74,213.20,52.00,47.60" data-text-background="#FFF0F3">ck</text>
+</g>
+<text x="1122.77" y="324.25" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#172033" data-text-box="1083.46,316.90,78.62,14.70" data-text-container="1015.35,297.80,214.84,71.20" data-text-background="#FFFFFF">Residual block</text>
+<text x="1122.77" y="343.25" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="normal" fill="#667085" data-text-box="1094.50,336.60,56.54,13.30" data-text-container="1015.35,297.80,214.84,71.20" data-text-background="#FFFFFF">14×14×1024</text>
+<rect x="1130.8" y="164.7" width="40" height="22" rx="11" fill="#FFFFFF" stroke="#D95670" stroke-width="1.1"/>
+<text x="1150.8" y="176.2" dominant-baseline="middle" text-anchor="middle" fill="#D95670" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="10" font-weight="700">×6</text>
+<rect x="1249.2" y="91.8" width="224.8" height="284.2" rx="16" fill="#EAF8FB" opacity="0.20"/>
+<text x="1361.61" y="110.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#172033" data-text-box="1337.10,101.80,49.03,18.20" data-text-container="1254.19,101.80,214.84,18.20" data-text-background="#FFFFFF">Stage 4</text>
+<g data-stage-id="stage4" filter="url(#cnn-shadow)">
+<polygon points="1316.8,206.0 1338.4,192.5 1406.4,192.5 1384.8,206.0" fill="#EAF8FB" stroke="#138FA3" stroke-width="1.2" opacity="0.82"/>
+<polygon points="1384.8,206.0 1406.4,192.5 1406.4,250.5 1384.8,264.0" fill="#138FA3" stroke="#138FA3" stroke-width="1.2" opacity="0.28"/>
+<rect x="1316.8" y="206.0" width="68.0" height="58.0" rx="5" fill="#EAF8FB" stroke="#138FA3" stroke-width="1.5"/>
+<path d="M 1322.8 214.0 H 1378.8" stroke="#138FA3" stroke-width="2.4" opacity="0.75"/>
+<text x="1350.81" y="229.30" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#172033" data-text-box="1327.47,221.60,46.67,15.40" data-text-container="1324.81,220.00,52.00,34.00" data-text-background="#EAF8FB">Bottlene</text>
+<text x="1350.81" y="244.70" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#172033" data-text-box="1344.32,237.00,12.99,15.40" data-text-container="1324.81,220.00,52.00,34.00" data-text-background="#EAF8FB">ck</text>
+</g>
+<text x="1361.61" y="320.85" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#172033" data-text-box="1322.30,313.50,78.62,14.70" data-text-container="1254.19,291.00,214.84,78.00" data-text-background="#FFFFFF">Residual block</text>
+<text x="1361.61" y="339.85" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="normal" fill="#667085" data-text-box="1338.94,333.20,45.35,13.30" data-text-container="1254.19,291.00,214.84,78.00" data-text-background="#FFFFFF">7×7×2048</text>
+<rect x="1370.4" y="170.5" width="40" height="22" rx="11" fill="#FFFFFF" stroke="#138FA3" stroke-width="1.1"/>
+<text x="1390.4" y="182.0" dominant-baseline="middle" text-anchor="middle" fill="#138FA3" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="10" font-weight="700">×3</text>
+<rect x="1488.0" y="91.8" width="224.8" height="284.2" rx="16" fill="#EAF2FF" opacity="0.20"/>
+<text x="1600.45" y="110.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#172033" data-text-box="1583.60,101.80,33.70,18.20" data-text-container="1493.03,101.80,214.84,18.20" data-text-background="#FFFFFF">Head</text>
+<rect data-stage-id="pool" x="1534.4" y="201.0" width="132.0" height="68.0" rx="14" fill="#EAF2FF" stroke="#7C8799" stroke-width="1.5" filter="url(#cnn-shadow)"/>
+<rect x="1534.4" y="201.0" width="5" height="68.0" rx="2.5" fill="#7C8799"/>
+<text x="1600.45" y="226.20" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#172033" data-text-box="1565.14,217.80,70.62,16.80" data-text-container="1546.45,213.00,108.00,44.00" data-text-background="#EAF2FF">Global Pool</text>
+<text x="1600.45" y="245.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#101722" data-text-box="1571.30,239.60,58.30,12.60" data-text-container="1546.45,213.00,108.00,44.00" data-text-background="#EAF2FF">2048-d vector</text>
+<text x="1600.45" y="332.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#172033" data-text-box="1559.58,325.15,81.74,14.70" data-text-container="1493.03,296.00,214.84,73.00" data-text-background="#FFFFFF">Spatial average</text>
+<rect x="1726.9" y="91.8" width="224.8" height="284.2" rx="16" fill="#ECF8F3" opacity="0.20"/>
+<text x="1839.29" y="110.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#172033" data-text-box="1805.60,101.80,67.38,18.20" data-text-container="1731.87,101.80,214.84,18.20" data-text-background="#FFFFFF">Prediction</text>
+<rect data-stage-id="output" x="1767.3" y="201.0" width="144.0" height="68.0" rx="14" fill="#ECF8F3" stroke="#344054" stroke-width="1.5" filter="url(#cnn-shadow)"/>
+<rect x="1767.3" y="201.0" width="5" height="68.0" rx="2.5" fill="#344054"/>
+<text x="1839.29" y="226.20" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#172033" data-text-box="1787.87,217.80,102.84,16.80" data-text-container="1779.29,213.00,120.00,44.00" data-text-background="#ECF8F3">Linear + Softmax</text>
+<text x="1839.29" y="245.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#667085" data-text-box="1800.60,239.60,77.38,12.60" data-text-container="1779.29,213.00,120.00,44.00" data-text-background="#ECF8F3">Class probabilities</text>
+<text x="1839.29" y="332.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#172033" data-text-box="1788.81,325.15,100.95,14.70" data-text-container="1731.87,296.00,214.84,73.00" data-text-background="#FFFFFF">1000-way classifier</text>
+<path d="M 216.4 235.0 H 358.8" fill="none" stroke="#5D697A" stroke-width="1.6" marker-end="url(#cnn-arrow)"/>
+<rect x="263.6" y="204.0" width="48.0" height="20" rx="10" fill="#FFFFFF" stroke="#DCE2EA" stroke-width="0.8"/>
+<text x="287.60" y="214.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="bold" fill="#667085" data-text-box="282.28,207.35,10.63,13.30" data-text-container="271.60,204.00,32.00,20.00" data-text-background="#FFFFFF">↓2</text>
+<path d="M 453.7 235.0 H 601.0" fill="none" stroke="#5D697A" stroke-width="1.6" marker-end="url(#cnn-arrow)"/>
+<rect x="491.9" y="204.0" width="70.8" height="20" rx="10" fill="#FFFFFF" stroke="#DCE2EA" stroke-width="0.8"/>
+<text x="527.36" y="214.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="bold" fill="#667085" data-text-box="499.94,207.35,54.84,13.30" data-text-container="499.94,204.00,54.84,20.00" data-text-background="#FFFFFF">MaxPool ↓2</text>
+<path d="M 689.2 235.0 H 840.7" fill="none" stroke="#5D697A" stroke-width="1.6" marker-end="url(#cnn-arrow)"/>
+<rect x="737.7" y="204.0" width="54.3" height="20" rx="10" fill="#FFFFFF" stroke="#DCE2EA" stroke-width="0.8"/>
+<text x="764.92" y="214.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="bold" fill="#667085" data-text-box="745.75,207.35,38.34,13.30" data-text-container="745.75,204.00,38.34,20.00" data-text-background="#FFFFFF">↓2 · C×2</text>
+<path d="M 927.2 235.0 H 1078.7" fill="none" stroke="#5D697A" stroke-width="1.6" marker-end="url(#cnn-arrow)"/>
+<rect x="975.8" y="204.0" width="54.3" height="20" rx="10" fill="#FFFFFF" stroke="#DCE2EA" stroke-width="0.8"/>
+<text x="1002.97" y="214.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="bold" fill="#667085" data-text-box="983.80,207.35,38.34,13.30" data-text-container="983.80,204.00,38.34,20.00" data-text-background="#FFFFFF">↓2 · C×2</text>
+<path d="M 1166.8 235.0 H 1316.8" fill="none" stroke="#5D697A" stroke-width="1.6" marker-end="url(#cnn-arrow)"/>
+<rect x="1214.6" y="204.0" width="54.3" height="20" rx="10" fill="#FFFFFF" stroke="#DCE2EA" stroke-width="0.8"/>
+<text x="1241.81" y="214.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="bold" fill="#667085" data-text-box="1222.64,207.35,38.34,13.30" data-text-container="1222.64,204.00,38.34,20.00" data-text-background="#FFFFFF">↓2 · C×2</text>
+<path d="M 1406.4 235.0 H 1534.4" fill="none" stroke="#5D697A" stroke-width="1.6" marker-end="url(#cnn-arrow)"/>
+<rect x="1437.5" y="204.0" width="65.8" height="20" rx="10" fill="#FFFFFF" stroke="#DCE2EA" stroke-width="0.8"/>
+<text x="1470.43" y="214.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="bold" fill="#667085" data-text-box="1445.52,207.35,49.82,13.30" data-text-container="1445.52,204.00,49.82,20.00" data-text-background="#FFFFFF">7×7 → 1×1</text>
+<path d="M 1666.4 235.0 H 1767.3" fill="none" stroke="#5D697A" stroke-width="1.6" marker-end="url(#cnn-arrow)"/>
+<rect x="1692.9" y="204.0" width="48.0" height="20" rx="10" fill="#FFFFFF" stroke="#DCE2EA" stroke-width="0.8"/>
+<text x="1716.87" y="214.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="bold" fill="#667085" data-text-box="1710.16,207.35,13.42,13.30" data-text-container="1700.87,204.00,32.00,20.00" data-text-background="#FFFFFF">FC</text>
+<rect x="170.0" y="430.0" width="1040.0" height="227.5" rx="18" fill="#FFFFFF" stroke="#B8C2D1" stroke-width="1.3" filter="url(#cnn-shadow)"/>
+<text x="190.00" y="451.80" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#172033" data-text-box="190.00,442.00,309.14,19.60" data-text-container="190.00,442.00,1000.00,37.90" data-text-background="#FFFFFF">Residual Bottleneck — representative block</text>
+<text x="190.00" y="473.25" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="normal" fill="#667085" data-text-box="190.00,466.60,295.52,13.30" data-text-container="190.00,442.00,1000.00,37.90" data-text-background="#FFFFFF">The projection shortcut is used only when shape or stride changes</text>
+<circle cx="242.0" cy="580.9" r="18" fill="#EAF2FF" stroke="#3569E8" stroke-width="1.4"/>
+<text x="242.0" y="581.9" dominant-baseline="middle" text-anchor="middle" fill="#172033" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="11" font-weight="700">x</text>
+<path d="M 260.0 580.9 H 341.0" fill="none" stroke="#5D697A" stroke-width="1.5" marker-end="url(#cnn-arrow)"/>
+<rect x="341.0" y="545.9" width="150.0" height="70.0" rx="10" fill="#EAF2FF" stroke="#3569E8" stroke-width="1.3"/>
+<text x="416.00" y="572.24" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#172033" data-text-box="391.08,564.89,49.84,14.70" data-text-container="351.00,557.90,130.00,46.00" data-text-background="#EAF2FF">1×1 Conv</text>
+<text x="416.00" y="590.75" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8.8" font-weight="normal" fill="#101722" data-text-box="382.72,584.59,66.56,12.32" data-text-container="351.00,557.90,130.00,46.00" data-text-background="#EAF2FF">reduce C → C/4</text>
+<path d="M 491.0 580.9 H 590.0" fill="none" stroke="#5D697A" stroke-width="1.5" marker-end="url(#cnn-arrow)"/>
+<rect x="590.0" y="545.9" width="150.0" height="70.0" rx="10" fill="#ECF8F3" stroke="#169B78" stroke-width="1.3"/>
+<text x="665.00" y="572.24" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#172033" data-text-box="640.08,564.89,49.84,14.70" data-text-container="600.00,557.90,130.00,46.00" data-text-background="#ECF8F3">3×3 Conv</text>
+<text x="665.00" y="590.75" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8.8" font-weight="normal" fill="#667085" data-text-box="636.89,584.59,56.23,12.32" data-text-container="600.00,557.90,130.00,46.00" data-text-background="#ECF8F3">spatial mixing</text>
+<path d="M 740.0 580.9 H 839.0" fill="none" stroke="#5D697A" stroke-width="1.5" marker-end="url(#cnn-arrow)"/>
+<rect x="839.0" y="545.9" width="150.0" height="70.0" rx="10" fill="#FFF3E4" stroke="#E99525" stroke-width="1.3"/>
+<text x="914.00" y="572.24" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#172033" data-text-box="889.08,564.89,49.84,14.70" data-text-container="849.00,557.90,130.00,46.00" data-text-background="#FFF3E4">1×1 Conv</text>
+<text x="914.00" y="590.75" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8.8" font-weight="normal" fill="#667085" data-text-box="879.68,584.59,68.64,12.32" data-text-container="849.00,557.90,130.00,46.00" data-text-background="#FFF3E4">expand C/4 → C</text>
+<path d="M 989.0 580.9 H 1069.0" fill="none" stroke="#5D697A" stroke-width="1.5" marker-end="url(#cnn-arrow)"/>
+<circle cx="1088.0" cy="580.9" r="19" fill="#FFFFFF" stroke="#3569E8" stroke-width="1.5"/>
+<text x="1088.0" y="581.9" dominant-baseline="middle" text-anchor="middle" fill="#172033" data-text-background="#FFFFFF" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="18" font-weight="700">+</text>
+<path d="M 242.0 562.9 V 508.9 H 1088.0 V 561.9" fill="none" stroke="#667085" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#cnn-arrow)"/>
+<text x="665.0" y="500.9" text-anchor="middle" fill="#667085" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="9" font-weight="600">identity shortcut</text>
+<path d="M 1107.0 580.9 H 1131.0" fill="none" stroke="#5D697A" stroke-width="1.5" marker-end="url(#cnn-arrow)"/>
+<rect x="1131.0" y="562.9" width="54" height="36" rx="18" fill="#ECF8F3" stroke="#E99525" stroke-width="1.3"/>
+<text x="1158.00" y="580.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.5" font-weight="bold" fill="#172033" data-text-box="1144.86,574.25,26.28,13.30" data-text-container="1135.00,566.90,46.00,28.00" data-text-background="#ECF8F3">ReLU</text>
+<rect x="1244.0" y="430.0" width="714.7" height="227.5" rx="18" fill="#FFFFFF" stroke="#B8C2D1" stroke-width="1.3" filter="url(#cnn-shadow)"/>
+<text x="1264.0" y="458.0" fill="#172033" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Visual grammar</text>
+<rect x="1266.0" y="482.0" width="30" height="20" rx="4" fill="#EAF2FF" stroke="#3569E8" stroke-width="1.2"/>
+<text x="1312.0" y="493.0" dominant-baseline="middle" fill="#172033" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="10">Tensor / feature map</text>
+<polygon points="1281.0,516.0 1294.0,527.0 1281.0,538.0 1268.0,527.0" fill="#FFF3E4" stroke="#E99525" stroke-width="1.2"/>
+<text x="1312.0" y="528.0" dominant-baseline="middle" fill="#172033" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="10">Downsample transition</text>
+<path d="M 1267.0 562.0 H 1296.0" stroke="#667085" stroke-width="1.4" fill="none" marker-end="url(#cnn-arrow)"/>
+<text x="1312.0" y="563.0" dominant-baseline="middle" fill="#172033" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="10">Residual / identity</text>
+<rect x="1266.0" y="587.0" width="32" height="20" rx="10" fill="#FFFFFF" stroke="#815AC0" stroke-width="1.1"/>
+<text x="1282.0" y="598.0" dominant-baseline="middle" text-anchor="middle" fill="#815AC0" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="8.5" font-weight="700">×N</text>
+<text x="1312.0" y="598.0" dominant-baseline="middle" fill="#172033" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="10">Repeated block</text>
+<text x="1264.00" y="635.74" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="8.2" font-weight="bold" fill="#667085" data-text-box="1264.00,630.00,358.05,11.48" data-text-container="1264.00,630.00,674.71,11.48" data-text-background="#FFFFFF">Tensor face area encodes spatial scale; prism depth encodes channels on a log scale.</text>
+<g id="figure-provenance"><rect x="0" y="692" width="2007" height="61" fill="#FFFFFF"/>
+<text x="24.00" y="711.00" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#172033" data-text-box="24.00,704.00,114.86,14.00" data-text-container="24.00,704.00,1959.00,33.00" data-text-background="#FFFFFF">Conceptual illustration</text>
+<text x="24.00" y="730.00" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="normal" fill="#667085" data-text-box="24.00,723.00,341.20,14.00" data-text-container="24.00,704.00,1959.00,33.00" data-text-background="#FFFFFF">Illustrative model plate; confirm executable topology against model code.</text>
+</g>
+</svg>

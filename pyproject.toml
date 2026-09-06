@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "figurecraft-skill"
+version = "0.26.0"
+description = "FigureCraft portable Agent Skill for deterministic charts and diagrams"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = [
+  "jsonschema>=4.20",
+  "matplotlib>=3.8",
+  "numpy>=1.26",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+export = ["CairoSVG>=2.7"]
+
+[tool.setuptools]
+py-modules = []

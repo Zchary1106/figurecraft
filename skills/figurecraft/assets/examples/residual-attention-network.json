@@ -1,0 +1,144 @@
+{
+  "version": "1.0",
+  "kind": "diagram.neural-network",
+  "title": "Residual attention encoder",
+  "caption": "Pre-normalized attention and feed-forward sublayers with explicit residual paths",
+  "provenance": {
+    "type": "conceptual",
+    "summary": "Illustrative neural architecture; no measured performance is implied."
+  },
+  "nodes": [
+    {
+      "id": "tokens",
+      "label": "Input tokens",
+      "subtitle": "B × T",
+      "role": "input",
+      "shape": "tensor",
+      "layer": 0
+    },
+    {
+      "id": "embed",
+      "label": "Token + position",
+      "subtitle": "B × T × D",
+      "role": "method",
+      "shape": "tensor",
+      "layer": 1
+    },
+    {
+      "id": "norm-attn",
+      "label": "LayerNorm",
+      "subtitle": "Pre-normalization",
+      "role": "operation",
+      "shape": "rounded",
+      "layer": 2,
+      "group": "attention block"
+    },
+    {
+      "id": "attention",
+      "label": "Multi-head attention",
+      "subtitle": "H heads · scaled dot product",
+      "role": "compute",
+      "layer": 3,
+      "group": "attention block"
+    },
+    {
+      "id": "add-attn",
+      "label": "Add",
+      "subtitle": "Residual merge",
+      "role": "operation",
+      "shape": "pill",
+      "layer": 4,
+      "group": "attention block"
+    },
+    {
+      "id": "norm-ffn",
+      "label": "LayerNorm",
+      "subtitle": "Pre-normalization",
+      "role": "operation",
+      "shape": "rounded",
+      "layer": 5,
+      "group": "feed-forward block"
+    },
+    {
+      "id": "ffn",
+      "label": "Feed-forward network",
+      "subtitle": "D → 4D → D · GELU",
+      "role": "compute",
+      "layer": 6,
+      "group": "feed-forward block"
+    },
+    {
+      "id": "add-ffn",
+      "label": "Add",
+      "subtitle": "Residual merge",
+      "role": "operation",
+      "shape": "pill",
+      "layer": 7,
+      "group": "feed-forward block"
+    },
+    {
+      "id": "pool",
+      "label": "Attention pooling",
+      "subtitle": "B × D",
+      "role": "method",
+      "layer": 8
+    },
+    {
+      "id": "prediction",
+      "label": "Prediction",
+      "subtitle": "B × C",
+      "role": "output",
+      "shape": "pill",
+      "layer": 9
+    }
+  ],
+  "edges": [
+    {"id": "tokenize", "from": "tokens", "to": "embed"},
+    {"id": "normalize-attn", "from": "embed", "to": "norm-attn"},
+    {"id": "attend", "from": "norm-attn", "to": "attention"},
+    {"id": "attention-output", "from": "attention", "to": "add-attn"},
+    {
+      "id": "attention-residual",
+      "from": "embed",
+      "to": "add-attn",
+      "label": "residual",
+      "kind": "feedback",
+      "style": "dashed",
+      "source_port": "N",
+      "target_port": "N"
+    },
+    {"id": "normalize-ffn", "from": "add-attn", "to": "norm-ffn"},
+    {"id": "transform", "from": "norm-ffn", "to": "ffn"},
+    {"id": "ffn-output", "from": "ffn", "to": "add-ffn"},
+    {
+      "id": "ffn-residual",
+      "from": "add-attn",
+      "to": "add-ffn",
+      "label": "residual",
+      "kind": "feedback",
+      "style": "dashed",
+      "source_port": "S",
+      "target_port": "S"
+    },
+    {"id": "pooling", "from": "add-ffn", "to": "pool"},
+    {"id": "classify", "from": "pool", "to": "prediction"}
+  ],
+  "style": {
+    "preset": "midnight-technical",
+    "visual_grammar": "semantic",
+    "overrides": {
+      "font_size": 12
+    }
+  },
+  "layout": {
+    "direction": "LR",
+    "medium": "web",
+    "density": "comfortable",
+    "margin": 46,
+    "optimize": true
+  },
+  "output": {
+    "primary": "svg",
+    "additional": ["drawio"]
+  }
+}

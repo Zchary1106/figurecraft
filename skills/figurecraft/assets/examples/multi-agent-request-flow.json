@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "kind": "diagram.algorithm",
+  "title": "One task: execution and review",
+  "view": {"type": "workflow", "scope": "one bounded task"},
+  "provenance": {"type": "conceptual", "summary": "Example workflow. Approval criteria and retry limits are supplied by the application."},
+  "nodes": [
+    {"id": "request", "label": "Receive task", "role": "input", "layer": 0},
+    {"id": "plan", "label": "Define plan", "subtitle": "Scope, evidence, permissions", "role": "method", "layer": 1},
+    {"id": "execute", "label": "Execute bounded work", "role": "tool", "layer": 2},
+    {"id": "review", "label": "Meets criteria?", "role": "decision", "layer": 3},
+    {"id": "result", "label": "Deliver result", "role": "outcome", "layer": 4},
+    {"id": "repair", "label": "Revise or escalate", "subtitle": "Within a configured retry budget", "role": "method", "layer": 4}
+  ],
+  "edges": [
+    {"from": "request", "to": "plan"},
+    {"from": "plan", "to": "execute"},
+    {"from": "execute", "to": "review"},
+    {"from": "review", "to": "result", "label": "yes"},
+    {"from": "review", "to": "repair", "label": "no"}
+  ],
+  "style": {"preset": "paper-light", "semantic_shapes": true},
+  "layout": {"direction": "TB", "medium": "web"},
+  "output": {"primary": "svg", "additional": ["drawio"]}
+}

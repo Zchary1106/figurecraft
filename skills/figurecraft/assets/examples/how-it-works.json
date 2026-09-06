@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "kind": "diagram.architecture",
+  "title": "How FigureCraft turns a request into a reviewable figure",
+  "caption": "The FigureSpec remains the source of truth; validation and delivery metadata make each result inspectable and reproducible.",
+  "provenance": {
+    "type": "conceptual",
+    "summary": "Overview of the FigureCraft rendering workflow; individual grammars and export formats vary by request."
+  },
+  "nodes": [
+    {
+      "id": "input",
+      "label": "Define the figure",
+      "subtitle": "Prompt, data, or FigureSpec",
+      "role": "actor",
+      "layer": 0
+    },
+    {
+      "id": "validate",
+      "label": "Validate constraints",
+      "subtitle": "Content, units, topology, and output needs",
+      "role": "decision",
+      "layer": 1
+    },
+    {
+      "id": "compose",
+      "label": "Compose the visual system",
+      "subtitle": "Grammar, theme, medium, typography, and layout",
+      "role": "agent",
+      "layer": 2
+    },
+    {
+      "id": "render",
+      "label": "Render deterministically",
+      "subtitle": "Matplotlib charts or SVG-first diagrams",
+      "role": "tool",
+      "layer": 3
+    },
+    {
+      "id": "deliver",
+      "label": "Deliver an auditable bundle",
+      "subtitle": "Figure, editable source, manifest, checks, and provenance",
+      "role": "report",
+      "layer": 4
+    }
+  ],
+  "edges": [
+    {"id": "specify", "from": "input", "to": "validate", "label": "specify", "kind": "control"},
+    {"id": "prepare", "from": "validate", "to": "compose", "label": "prepare", "kind": "control"},
+    {"id": "layout", "from": "compose", "to": "render", "label": "layout", "kind": "control"},
+    {"id": "verify", "from": "render", "to": "deliver", "label": "lint and publish", "kind": "evidence"}
+  ],
+  "style": {
+    "preset": "editorial-contrast",
+    "visual_grammar": "semantic",
+    "overrides": {"font_size": 13}
+  },
+  "layout": {
+    "direction": "LR",
+    "medium": "web",
+    "density": "comfortable",
+    "margin": 48,
+    "optimize": true
+  },
+  "output": {"primary": "svg", "additional": ["drawio"]}
+}

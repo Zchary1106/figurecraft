@@ -1,0 +1,304 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/figurecraft/figure-spec.schema.json",
+  "title": "FigureCraft FigureSpec",
+  "type": "object",
+  "required": ["version", "kind"],
+  "properties": {
+    "version": {"const": "1.0"},
+    "kind": {
+      "enum": [
+        "chart.line",
+        "chart.bar",
+        "chart.scatter",
+        "chart.errorbar",
+        "chart.histogram",
+        "chart.box",
+        "chart.heatmap",
+        "project.gantt",
+        "diagram.flowchart",
+        "diagram.algorithm",
+        "diagram.architecture",
+        "diagram.cnn-architecture",
+        "diagram.framework-matrix",
+        "diagram.system-landscape",
+        "diagram.research-framework",
+        "diagram.neural-network",
+        "diagram.swimlane"
+      ]
+    },
+    "title": {"type": "string"},
+    "caption": {"type": "string"},
+    "note": {"type": "string"},
+    "intent": {"type": "string"},
+    "audience": {"type": "string"},
+    "language": {"enum": ["en", "zh-CN"]},
+    "provenance": {
+      "type": "object", "required": ["type"], "additionalProperties": false,
+      "properties": {
+        "type": {"enum": ["conceptual", "code-derived", "data-derived", "unspecified"]},
+        "summary": {"type": "string"},
+        "sources": {"type": "array", "items": {"$ref": "#/$defs/text"}, "uniqueItems": true},
+        "verified": {"type": "boolean"}
+      },
+      "if": {"properties": {"type": {"enum": ["code-derived", "data-derived"]}}},
+      "then": {"required": ["sources"], "properties": {"sources": {"minItems": 1}}}
+    },
+    "view": {"type": "object"},
+    "data": {"$ref": "#/$defs/data"},
+    "series": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/series"}},
+    "nodes": {"type": "array", "items": {"$ref": "#/$defs/node"}},
+    "edges": {"type": "array", "items": {"$ref": "#/$defs/edge"}},
+    "stages": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/stage"}},
+    "block_detail": {"type": "object", "properties": {
+      "steps": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/labelled"}},
+      "residual": {"type": "boolean"}
+    }},
+    "stage_table": {"type": "array", "items": {"type": "object"}},
+    "framework_stages": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/frameworkStage"}},
+    "phases": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/named"}},
+    "tracks": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/track"}},
+    "cross_links": {"type": "array", "items": {"$ref": "#/$defs/edge"}},
+    "integration": {"$ref": "#/$defs/panel"},
+    "outcome": {"$ref": "#/$defs/panel"},
+    "feedback": {"$ref": "#/$defs/edge"},
+    "zones": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/zone"}},
+    "connections": {"type": "array", "items": {"$ref": "#/$defs/edge"}},
+    "tasks": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/task"}},
+    "lanes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/node"}},
+    "semantics": {"type": "object", "properties": {
+      "x_label": {"type": "string"}, "y_label": {"type": "string"},
+      "x_unit": {"type": "string"}, "y_unit": {"type": "string"},
+      "delta_unit": {"type": "string"},
+      "uncertainty": {"$ref": "#/$defs/text"}
+    }},
+    "style": {"$ref": "#/$defs/style"},
+    "layout": {"$ref": "#/$defs/layout"},
+    "output": {"type": "object", "properties": {
+      "primary": {"enum": ["svg", "png", "pdf", "drawio"]},
+      "additional": {"type": "array", "items": {"enum": ["svg", "png", "pdf", "drawio"]}},
+      "dpi": {"type": "integer", "minimum": 1}
+    }},
+    "assumptions": {"type": "array", "items": {"type": "string"}}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"kind": {"pattern": "^chart\\."}}},
+      "then": {"required": ["data"], "properties": {"data": {
+        "anyOf": [{"required": ["columns"]}, {"required": ["source"]}, {"required": ["matrix"]}]
+      }}}
+    },
+    {
+      "if": {"properties": {"kind": {"enum": ["chart.line", "chart.scatter", "chart.bar", "chart.errorbar"]}}},
+      "then": {"properties": {
+        "series": {"items": {"required": ["x", "y"]}},
+        "data": {"anyOf": [{"required": ["columns"]}, {"required": ["source"]}]}
+      }}
+    },
+    {
+      "if": {"properties": {"kind": {"enum": ["chart.histogram", "chart.box"]}}},
+      "then": {"properties": {
+        "series": {"items": {"anyOf": [{"required": ["field"]}, {"required": ["y"]}]}},
+        "data": {"anyOf": [{"required": ["columns"]}, {"required": ["source"]}]}
+      }}
+    },
+    {
+      "if": {"properties": {"kind": {"const": "project.gantt"}}},
+      "then": {"required": ["tasks"]}
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "enum": [
+              "diagram.flowchart",
+              "diagram.algorithm",
+              "diagram.architecture",
+              "diagram.neural-network",
+              "diagram.swimlane"
+            ]
+          }
+        }
+      },
+      "then": {"required": ["nodes"]}
+    },
+    {
+      "if": {"properties": {"kind": {"const": "diagram.system-landscape"}}},
+      "then": {"required": ["zones"]}
+    },
+    {
+      "if": {"properties": {"kind": {"const": "diagram.cnn-architecture"}}},
+      "then": {"required": ["stages"]}
+    },
+    {
+      "if": {"properties": {"kind": {"const": "diagram.framework-matrix"}}},
+      "then": {"required": ["phases", "tracks"]}
+    }
+  ],
+  "$defs": {
+    "text": {"type": "string", "minLength": 1},
+    "positive": {"type": "number", "exclusiveMinimum": 0},
+    "dimension": {"type": "integer", "minimum": 1},
+    "shape": {"type": "array", "minItems": 1, "items": {
+      "anyOf": [{"$ref": "#/$defs/dimension"}, {"$ref": "#/$defs/text"}]
+    }},
+    "labelled": {"type": "object", "required": ["label"], "properties": {
+      "label": {"$ref": "#/$defs/text"}, "subtitle": {"type": "string"},
+      "icon": {"type": "string"}
+    }},
+    "named": {"type": "object", "required": ["id", "title"], "properties": {
+      "id": {"$ref": "#/$defs/text"}, "title": {"$ref": "#/$defs/text"},
+      "subtitle": {"type": "string"}
+    }},
+    "data": {"type": "object", "properties": {
+      "columns": {"type": "object", "minProperties": 1, "additionalProperties": {
+        "type": "array", "minItems": 1, "items": {"type": ["number", "string"]}
+      }},
+      "source": {"$ref": "#/$defs/text"},
+      "matrix": {"type": "array", "minItems": 1, "items": {
+        "type": "array", "minItems": 1, "items": {"type": "number"}
+      }},
+      "row_labels": {"type": "array", "items": {"type": ["string", "number"]}},
+      "column_labels": {"type": "array", "items": {"type": ["string", "number"]}}
+    }},
+    "series": {"type": "object", "properties": {
+      "x": {"$ref": "#/$defs/text"}, "y": {"$ref": "#/$defs/text"},
+      "field": {"$ref": "#/$defs/text"}, "error": {"$ref": "#/$defs/text"},
+      "lower": {"$ref": "#/$defs/text"}, "upper": {"$ref": "#/$defs/text"},
+      "label": {"type": "string"}, "color": {"type": "string"},
+      "marker": {"type": "string"}, "linestyle": {"type": "string"},
+      "alpha": {"type": "number", "minimum": 0, "maximum": 1},
+      "interval_alpha": {"type": "number", "minimum": 0, "maximum": 1},
+      "linewidth": {"$ref": "#/$defs/positive"}, "markersize": {"$ref": "#/$defs/positive"},
+      "size": {"$ref": "#/$defs/positive"}
+    }},
+    "node": {"type": "object", "required": ["id"], "properties": {
+      "id": {"$ref": "#/$defs/text"}, "label": {"type": "string"},
+      "subtitle": {"type": "string"}, "layer": {"type": "integer", "minimum": 0},
+      "lane": {"$ref": "#/$defs/text"}, "group": {"type": "string"},
+      "x": {"type": "number"}, "y": {"type": "number"},
+      "width": {"$ref": "#/$defs/positive"}, "height": {"$ref": "#/$defs/positive"},
+      "visual_width": {"$ref": "#/$defs/positive"}, "visual_height": {"$ref": "#/$defs/positive"},
+      "input_shape": {"$ref": "#/$defs/shape"}, "output_shape": {"$ref": "#/$defs/shape"},
+      "in_features": {"$ref": "#/$defs/dimension"}, "out_features": {"$ref": "#/$defs/dimension"},
+      "in_channels": {"$ref": "#/$defs/dimension"}, "out_channels": {"$ref": "#/$defs/dimension"}
+    }},
+    "edge": {"type": "object", "required": ["from", "to"], "properties": {
+      "from": {"$ref": "#/$defs/text"}, "to": {"$ref": "#/$defs/text"},
+      "id": {"$ref": "#/$defs/text"}, "label": {"type": "string"},
+      "technology": {"type": "string"},
+      "from_anchor": {"type": "number", "minimum": 0, "maximum": 1},
+      "to_anchor": {"type": "number", "minimum": 0, "maximum": 1},
+      "source_port": {"enum": ["N", "E", "S", "W"]},
+      "target_port": {"enum": ["N", "E", "S", "W"]}
+    }},
+    "stage": {"allOf": [{"$ref": "#/$defs/named"}, {"$ref": "#/$defs/node"}],
+      "properties": {
+        "type": {"enum": ["tensor", "operator"]},
+        "repeat": {"$ref": "#/$defs/dimension"},
+        "channels": {"$ref": "#/$defs/dimension"},
+        "spatial": {"anyOf": [
+          {"$ref": "#/$defs/dimension"},
+          {"type": "array", "minItems": 1, "maxItems": 2, "items": {"$ref": "#/$defs/dimension"}}
+        ]}
+      },
+      "if": {"properties": {"type": {"const": "tensor"}}},
+      "then": {"required": ["spatial", "channels"]}
+    },
+    "frameworkStage": {"allOf": [{"$ref": "#/$defs/named"}],
+      "required": ["items"], "properties": {
+        "items": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/labelled"}}
+      }
+    },
+    "track": {"allOf": [{"$ref": "#/$defs/named"}], "required": ["cells"], "properties": {
+      "cells": {"type": "array", "items": {
+        "allOf": [{"$ref": "#/$defs/labelled"}], "required": ["id", "phase"],
+        "properties": {"id": {"$ref": "#/$defs/text"}, "phase": {"$ref": "#/$defs/text"}}
+      }}
+    }},
+    "zone": {"allOf": [{"$ref": "#/$defs/named"}], "properties": {
+      "row": {"type": "integer", "minimum": 0}, "column": {"type": "integer", "minimum": 0},
+      "span": {"$ref": "#/$defs/dimension"}, "section_columns": {"$ref": "#/$defs/dimension"},
+      "sections": {"type": "array", "items": {
+        "type": "object", "required": ["title"], "properties": {
+          "title": {"$ref": "#/$defs/text"}, "columns": {"$ref": "#/$defs/dimension"},
+          "items": {"type": "array", "items": {"anyOf": [
+            {"type": "string"}, {"$ref": "#/$defs/labelled"}
+          ]}}
+        }
+      }}
+    }},
+    "task": {"type": "object", "required": ["label", "start", "end"], "properties": {
+      "id": {"$ref": "#/$defs/text"}, "label": {"$ref": "#/$defs/text"},
+      "start": {"type": "string", "format": "date"}, "end": {"type": "string", "format": "date"},
+      "completion": {"type": "number", "minimum": 0, "maximum": 1},
+      "depends_on": {"anyOf": [
+        {"$ref": "#/$defs/text"},
+        {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/text"}}
+      ]}
+    }},
+    "panel": {"type": "object", "properties": {
+      "label": {"type": "string"}, "subtitle": {"type": "string"},
+      "width": {"$ref": "#/$defs/positive"}, "height": {"$ref": "#/$defs/positive"},
+      "chips": {"type": "array", "items": {"type": "string"}}
+    }},
+    "style": {"type": "object", "properties": {
+      "preset": {"type": "string"}, "colormap": {"type": "string"},
+      "semantic_shapes": {"type": "boolean"},
+      "visual_grammar": {"enum": ["legacy", "semantic"]},
+      "card_accent": {"enum": ["role", "none", "legacy"]},
+      "title_alignment": {"enum": ["left", "center", "right"]},
+      "annotate": {"type": "boolean"}, "annotate_values": {"type": "boolean"},
+      "annotate_delta": {"type": "boolean"}, "delta_unit": {"type": "string"},
+      "direct_labels": {"type": "boolean"}, "direct_label_values": {"type": "boolean"},
+      "direct_label_format": {"type": "string"}, "value_format": {"type": "string"},
+      "bar_group_width": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+    }},
+    "layout": {"type": "object", "properties": {
+      "optimize": {"type": "boolean"},
+      "width_mm": {"$ref": "#/$defs/positive"}, "aspect_ratio": {"$ref": "#/$defs/positive"},
+      "height_mm": {"$ref": "#/$defs/positive"},
+      "medium": {"enum": ["paper-single", "paper-double", "slide", "web"]},
+      "min_font_pt": {"$ref": "#/$defs/positive"},
+      "min_font_px": {"$ref": "#/$defs/positive"},
+      "placement": {"type": "object", "required": ["mode", "boxes", "canvas"],
+        "additionalProperties": false, "properties": {
+          "mode": {"enum": ["content-only", "local"]},
+          "boxes": {"type": "object", "additionalProperties": {"$ref": "#/$defs/rectangle"}},
+          "canvas": {"type": "object", "required": ["width", "height"], "additionalProperties": false,
+            "properties": {"width": {"$ref": "#/$defs/positive"}, "height": {"$ref": "#/$defs/positive"}}},
+          "unlocked_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/text"}},
+          "routes": {"type": "array", "items": {"type": "object"}},
+          "source_sha256": {"type": "string"}
+        }},
+      "width": {"$ref": "#/$defs/positive"}, "height": {"$ref": "#/$defs/positive"},
+      "margin": {"type": "number", "minimum": 0}, "stacked": {"type": "boolean"},
+      "gap": {"type": "number", "minimum": 0},
+      "column_gap": {"type": "number", "minimum": 0},
+      "row_gap": {"type": "number", "minimum": 0},
+      "stage_gap": {"type": "number", "minimum": 0},
+      "convergence_gutter": {"type": "number", "minimum": 0},
+      "stage_height": {"$ref": "#/$defs/positive"},
+      "track_height": {"$ref": "#/$defs/positive"},
+      "phase_height": {"$ref": "#/$defs/positive"},
+      "label_width": {"$ref": "#/$defs/positive"},
+      "inset_width": {"$ref": "#/$defs/positive"},
+      "inset_height": {"$ref": "#/$defs/positive"},
+      "start_y": {"type": "number"}, "main_y": {"type": "number"},
+      "grid_y": {"type": "number"}, "phase_y": {"type": "number"},
+      "inset_x": {"type": "number"}, "inset_y": {"type": "number"},
+      "direction": {"enum": ["LR", "TB", "RL", "BT"]},
+      "bins": {"anyOf": [
+        {"$ref": "#/$defs/dimension"}, {"$ref": "#/$defs/text"},
+        {"type": "array", "minItems": 2, "items": {"type": "number"}}
+      ]},
+      "cell_aspect": {"anyOf": [{"enum": ["equal", "auto"]}, {"$ref": "#/$defs/positive"}]}
+    }},
+    "rectangle": {"type": "object", "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": {"type": "number", "minimum": 0}, "y": {"type": "number", "minimum": 0},
+        "width": {"$ref": "#/$defs/positive"}, "height": {"$ref": "#/$defs/positive"}
+      }}
+  },
+  "additionalProperties": false
+}

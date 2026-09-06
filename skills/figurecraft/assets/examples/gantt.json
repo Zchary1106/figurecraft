@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "provenance": {"type": "conceptual", "summary": "Illustrative dates and dependencies; not a committed project schedule."},
+  "kind": "project.gantt",
+  "title": "Research delivery plan",
+  "tasks": [
+    {
+      "id": "design",
+      "label": "Study design",
+      "start": "2026-09-01",
+      "end": "2026-09-05",
+      "group": "Research",
+      "completion": 1.0
+    },
+    {
+      "id": "experiment",
+      "label": "Experiments",
+      "start": "2026-09-06",
+      "end": "2026-09-18",
+      "group": "Research",
+      "depends_on": "design",
+      "completion": 0.45
+    },
+    {
+      "id": "writing",
+      "label": "Manuscript",
+      "start": "2026-09-15",
+      "end": "2026-09-25",
+      "group": "Writing",
+      "depends_on": "experiment"
+    }
+  ],
+  "style": {"preset": "paper-light"},
+  "output": {"primary": "svg"}
+}

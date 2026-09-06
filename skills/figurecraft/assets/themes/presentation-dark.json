@@ -1,0 +1,22 @@
+{
+  "name": "presentation-dark",
+  "background": "#0F172A",
+  "foreground": "#F7F9FC",
+  "muted": "#AAB4C5",
+  "grid": "#2D3A50",
+  "edge": "#AAB4C5",
+  "node_fill": "#17233A",
+  "node_stroke": "#3B4C67",
+  "node_fills": ["#172B55", "#12382F", "#42301D", "#30254F", "#47212B", "#123B46"],
+  "accents": ["#6D9CFF", "#4DD4AC", "#F5B85C", "#B79AF4", "#FF8298", "#5ED1E4"],
+  "group_fill": "#111B2E",
+  "group_stroke": "#40506A",
+  "lane_even": "#111B2E",
+  "lane_odd": "#0F172A",
+  "font_family": "DejaVu Sans",
+  "svg_font_family": "Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif",
+  "font_size": 12,
+  "line_width": 1.7,
+  "interval_alpha": 0.20,
+  "palette": ["#6D9CFF", "#FF9678", "#4DD4AC", "#B79AF4", "#F5B85C", "#5ED1E4", "#FF8298", "#D8DEEA"]
+}

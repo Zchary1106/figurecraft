@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="926.8" viewBox="0 0 1600 926.8" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">AI Research Collaboration Platform</title>
+<desc id="figure-desc">Service boundaries, agent runtime, and shared infrastructure</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5E6879"/></marker>
+<marker id="landscape-arrow-0" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4C78D0"/></marker>
+<marker id="landscape-arrow-1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5AA35A"/></marker>
+<marker id="landscape-arrow-2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#E69520"/></marker>
+<marker id="landscape-arrow-3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8B5CF6"/></marker>
+<marker id="landscape-arrow-4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#16A6A1"/></marker>
+<marker id="landscape-arrow-5" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D95772"/></marker>
+<filter id="shadow-zone" x="-12%" y="-12%" width="124%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1D2433" flood-opacity="0.13"/></filter>
+<filter id="shadow-card" x="-12%" y="-14%" width="124%" height="132%"><feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#1D2433" flood-opacity="0.08"/></filter>
+<linearGradient id="canvas-gradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F5F7FB"/><stop offset="100%" stop-color="#EEF2F7"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="1600" height="863" fill="url(#canvas-gradient)"/>
+<rect x="24.0" y="12" width="4" height="37" rx="2" fill="#3569E8"/>
+<text x="40.00" y="22.60" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1D2433" data-text-box="40.00,10.00,321.31,25.20" data-text-container="40.00,10.00,1536.00,45.60" data-text-background="#F5F7FB">AI Research Collaboration Platform</text>
+<text x="40.00" y="47.90" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="normal" fill="#101722" data-text-box="40.00,40.20,314.06,15.40" data-text-container="40.00,10.00,1536.00,45.60" data-text-background="#F5F7FB">Service boundaries, agent runtime, and shared infrastructure</text>
+<path data-edge-id="backend--agent-core" d="M 772.000 234.868 L 828.000 234.868" fill="none" stroke="#5E6879" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#edge-arrow-b7106b8c76cf)"/>
+<path data-edge-id="backend--infrastructure" d="M 248.400 500.600 L 248.400 528.600 L 334.400 528.600 L 334.400 556.600" fill="none" stroke="#5E6879" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#edge-arrow-ab86de2ae007)"/>
+<path data-edge-id="agent-core--infrastructure" d="M 1351.600 500.600 L 1351.600 528.600 L 1234.560 528.600 L 1234.560 556.600" fill="none" stroke="#5E6879" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#edge-arrow-e389e61fc113)"/>
+<rect x="24.0" y="72.0" width="748.0" height="428.6" rx="20.0" fill="#FFFFFF" stroke="#3B4556" stroke-width="1.80" filter="url(#shadow-zone)"/>
+<line x1="40.0" y1="114.0" x2="756.0" y2="114.0" stroke="#E4E8EF" stroke-width="1"/>
+<text x="42.00" y="92.50" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#1D2433" data-text-box="42.00,82.00,127.28,21.00" data-text-container="42.00,82.00,128.28,21.00" data-text-background="#FFFFFF">Backend Service</text>
+<text x="184.28" y="92.50" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#101722" data-text-box="184.28,84.10,101.00,16.80" data-text-container="184.28,82.00,569.72,21.00" data-text-background="#FFFFFF">Go · Gin · GORM</text>
+<rect x="40.0" y="116.0" width="716.0" height="104.2" rx="9.0" fill="#EAF2FF" fill-opacity="0.52" stroke="#4C78D0" stroke-width="1.25"/>
+<g data-icon="api" aria-hidden="true" transform="translate(50.0 126.0) scale(0.7083)" fill="none" stroke="#4C78D0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#4C78D0"><path d="M8 5H5v14h3M16 5h3v14h-3"/><path d="M9 9h6M12 6l3 3-3 3M15 15H9M12 12l-3 3 3 3"/></g>
+<text x="74.00" y="133.10" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="74.00,124.00,69.65,18.20" data-text-container="74.00,124.00,70.65,18.20" data-text-background="#FFFFFF">HTTP APIs</text>
+<text x="158.65" y="133.10" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#101722" data-text-box="158.65,126.10,128.39,14.00" data-text-container="158.65,124.00,585.35,18.20" data-text-background="#FFFFFF">Product-facing endpoints</text>
+<rect x="54.0" y="150.2" width="164.5" height="54.0" rx="8.0" fill="#EAF2FF" stroke="#4C78D0" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="55.5" y="159.2" width="3" height="36.0" rx="1.5" fill="#4C78D0" opacity="0.72"/>
+<text x="136.25" y="168.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="113.22,160.70,46.06,15.40" data-text-container="66.00,159.20,140.50,36.00" data-text-background="#EAF2FF">Projects</text>
+<text x="136.25" y="187.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#101722" data-text-box="98.09,181.10,76.32,12.60" data-text-container="66.00,159.20,140.50,36.00" data-text-background="#EAF2FF">Members · Assets</text>
+<rect x="228.5" y="150.2" width="164.5" height="54.0" rx="8.0" fill="#EAF2FF" stroke="#4C78D0" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="230.0" y="159.2" width="3" height="36.0" rx="1.5" fill="#4C78D0" opacity="0.72"/>
+<text x="310.75" y="168.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="275.73,160.70,70.04,15.40" data-text-container="240.50,159.20,140.50,36.00" data-text-background="#EAF2FF">Experiments</text>
+<text x="310.75" y="187.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#101722" data-text-box="280.01,181.10,61.48,12.60" data-text-container="240.50,159.20,140.50,36.00" data-text-background="#EAF2FF">Runs · Metrics</text>
+<rect x="403.0" y="150.2" width="164.5" height="54.0" rx="8.0" fill="#EAF2FF" stroke="#4C78D0" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="404.5" y="159.2" width="3" height="36.0" rx="1.5" fill="#4C78D0" opacity="0.72"/>
+<text x="485.25" y="168.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="464.18,160.70,42.14,15.40" data-text-container="415.00,159.20,140.50,36.00" data-text-background="#EAF2FF">Figures</text>
+<text x="485.25" y="187.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#101722" data-text-box="451.60,181.10,67.31,12.60" data-text-container="415.00,159.20,140.50,36.00" data-text-background="#EAF2FF">Specs · Exports</text>
+<rect x="577.5" y="150.2" width="164.5" height="54.0" rx="8.0" fill="#EAF2FF" stroke="#4C78D0" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="579.0" y="159.2" width="3" height="36.0" rx="1.5" fill="#4C78D0" opacity="0.72"/>
+<text x="659.75" y="168.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="644.50,160.70,30.51,15.40" data-text-container="589.50,159.20,140.50,36.00" data-text-background="#EAF2FF">Skills</text>
+<text x="659.75" y="187.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#101722" data-text-box="624.24,181.10,71.02,12.60" data-text-container="589.50,159.20,140.50,36.00" data-text-background="#EAF2FF">Registry · CRUD</text>
+<rect x="40.0" y="234.2" width="716.0" height="104.2" rx="9.0" fill="#F7F8FA" fill-opacity="0.52" stroke="#70798A" stroke-width="1.25"/>
+<g data-icon="security" aria-hidden="true" transform="translate(50.0 244.2) scale(0.7083)" fill="none" stroke="#70798A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#70798A"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></g>
+<text x="74.00" y="251.30" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="74.00,242.20,127.12,18.20" data-text-container="74.00,242.20,128.12,18.20" data-text-background="#FFFFFF">Security &amp; Runtime</text>
+<rect x="54.0" y="268.4" width="164.5" height="54.0" rx="8.0" fill="#FBFCFE" stroke="#70798A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="55.5" y="277.4" width="3" height="36.0" rx="1.5" fill="#70798A" opacity="0.72"/>
+<text x="136.25" y="286.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="109.24,278.90,54.03,15.40" data-text-container="66.00,277.40,140.50,36.00" data-text-background="#FBFCFE">JWT Auth</text>
+<text x="136.25" y="305.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#101722" data-text-box="105.51,299.30,61.48,12.60" data-text-container="66.00,277.40,140.50,36.00" data-text-background="#FBFCFE">Access tokens</text>
+<rect x="228.5" y="268.4" width="164.5" height="54.0" rx="8.0" fill="#FBFCFE" stroke="#70798A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="230.0" y="277.4" width="3" height="36.0" rx="1.5" fill="#70798A" opacity="0.72"/>
+<text x="310.75" y="286.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="293.92,278.90,33.66,15.40" data-text-container="240.50,277.40,140.50,36.00" data-text-background="#FBFCFE">RBAC</text>
+<text x="310.75" y="305.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#101722" data-text-box="281.87,299.30,57.77,12.60" data-text-container="240.50,277.40,140.50,36.00" data-text-background="#FBFCFE">Policy checks</text>
+<rect x="403.0" y="268.4" width="164.5" height="54.0" rx="8.0" fill="#FBFCFE" stroke="#70798A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="404.5" y="277.4" width="3" height="36.0" rx="1.5" fill="#70798A" opacity="0.72"/>
+<text x="485.25" y="286.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="457.04,278.90,56.41,15.40" data-text-container="415.00,277.40,140.50,36.00" data-text-background="#FBFCFE">Rate Limit</text>
+<text x="485.25" y="305.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#101722" data-text-box="472.26,299.30,25.97,12.60" data-text-container="415.00,277.40,140.50,36.00" data-text-background="#FBFCFE">Quota</text>
+<rect x="577.5" y="268.4" width="164.5" height="54.0" rx="8.0" fill="#FBFCFE" stroke="#70798A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="579.0" y="277.4" width="3" height="36.0" rx="1.5" fill="#70798A" opacity="0.72"/>
+<text x="659.75" y="286.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="635.12,278.90,49.26,15.40" data-text-container="589.50,277.40,140.50,36.00" data-text-background="#FBFCFE">Sandbox</text>
+<text x="659.75" y="305.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#101722" data-text-box="632.99,299.30,53.53,12.60" data-text-container="589.50,277.40,140.50,36.00" data-text-background="#FBFCFE">Isolated jobs</text>
+<rect x="40.0" y="352.4" width="716.0" height="104.2" rx="9.0" fill="#ECF8E9" fill-opacity="0.52" stroke="#5AA35A" stroke-width="1.25"/>
+<g data-icon="workflow" aria-hidden="true" transform="translate(50.0 362.4) scale(0.7083)" fill="none" stroke="#5AA35A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#5AA35A"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M7.2 6H14a4 4 0 0 1 4 4v1M15 8l3 3 3-3"/><path d="M16.8 18H10a4 4 0 0 1-4-4v-1M9 16l-3-3-3 3"/></g>
+<text x="74.00" y="369.50" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="74.00,360.40,91.09,18.20" data-text-container="74.00,360.40,92.09,18.20" data-text-background="#FFFFFF">Domain Logic</text>
+<rect x="54.0" y="386.6" width="164.5" height="54.0" rx="8.0" fill="#ECF8E9" stroke="#5AA35A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="55.5" y="395.6" width="3" height="36.0" rx="1.5" fill="#5AA35A" opacity="0.72"/>
+<text x="136.25" y="413.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="116.47,405.90,39.57,15.40" data-text-container="66.00,395.60,140.50,36.00" data-text-background="#ECF8E9">Project</text>
+<rect x="228.5" y="386.6" width="164.5" height="54.0" rx="8.0" fill="#ECF8E9" stroke="#5AA35A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="230.0" y="395.6" width="3" height="36.0" rx="1.5" fill="#5AA35A" opacity="0.72"/>
+<text x="310.75" y="413.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="278.97,405.90,63.55,15.40" data-text-container="240.50,395.60,140.50,36.00" data-text-background="#ECF8E9">Experiment</text>
+<rect x="403.0" y="386.6" width="164.5" height="54.0" rx="8.0" fill="#ECF8E9" stroke="#5AA35A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="404.5" y="395.6" width="3" height="36.0" rx="1.5" fill="#5AA35A" opacity="0.72"/>
+<text x="485.25" y="413.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="464.17,405.90,42.17,15.40" data-text-container="415.00,395.60,140.50,36.00" data-text-background="#ECF8E9">Dataset</text>
+<rect x="577.5" y="386.6" width="164.5" height="54.0" rx="8.0" fill="#ECF8E9" stroke="#5AA35A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="579.0" y="395.6" width="3" height="36.0" rx="1.5" fill="#5AA35A" opacity="0.72"/>
+<text x="659.75" y="413.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="639.32,405.90,40.86,15.40" data-text-container="589.50,395.60,140.50,36.00" data-text-background="#ECF8E9">Artifact</text>
+<rect x="828.0" y="72.0" width="748.0" height="428.6" rx="20.0" fill="#FFFFFF" stroke="#3B4556" stroke-width="1.80" filter="url(#shadow-zone)"/>
+<line x1="844.0" y1="114.0" x2="1560.0" y2="114.0" stroke="#E4E8EF" stroke-width="1"/>
+<text x="846.00" y="92.50" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#1D2433" data-text-box="846.00,82.00,85.68,21.00" data-text-container="846.00,82.00,86.68,21.00" data-text-background="#FFFFFF">Agent Core</text>
+<text x="946.68" y="92.50" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#101722" data-text-box="946.68,84.10,166.22,16.80" data-text-container="946.68,82.00,611.32,21.00" data-text-background="#FFFFFF">Python · gRPC · Agent SDK</text>
+<rect x="844.0" y="116.0" width="716.0" height="104.2" rx="9.0" fill="#F4EFFF" fill-opacity="0.52" stroke="#8B5CF6" stroke-width="1.25"/>
+<g data-icon="model" aria-hidden="true" transform="translate(854.0 126.0) scale(0.7083)" fill="none" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#8B5CF6"><rect x="4" y="4" width="16" height="4" rx="1.5"/><rect x="4" y="10" width="16" height="4" rx="1.5"/><rect x="4" y="16" width="16" height="4" rx="1.5"/></g>
+<text x="878.00" y="133.10" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="878.00,124.00,146.21,18.20" data-text-container="878.00,124.00,147.21,18.20" data-text-background="#FFFFFF">Reasoning &amp; Planning</text>
+<rect x="858.0" y="150.2" width="222.7" height="54.0" rx="8.0" fill="#F4EFFF" stroke="#8B5CF6" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="859.5" y="159.2" width="3" height="36.0" rx="1.5" fill="#8B5CF6" opacity="0.72"/>
+<text x="969.33" y="168.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="947.93,160.70,42.80,15.40" data-text-container="870.00,159.20,198.67,36.00" data-text-background="#F4EFFF">Planner</text>
+<text x="969.33" y="187.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#101722" data-text-box="946.01,181.10,46.64,12.60" data-text-container="870.00,159.20,198.67,36.00" data-text-background="#F4EFFF">Task graph</text>
+<rect x="1090.7" y="150.2" width="222.7" height="54.0" rx="8.0" fill="#F4EFFF" stroke="#8B5CF6" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="1092.2" y="159.2" width="3" height="36.0" rx="1.5" fill="#8B5CF6" opacity="0.72"/>
+<text x="1202.00" y="168.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="1177.07,160.70,49.87,15.40" data-text-container="1102.67,159.20,198.67,36.00" data-text-background="#F4EFFF">LLM Hub</text>
+<text x="1202.00" y="187.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#101722" data-text-box="1185.57,181.10,32.86,12.60" data-text-container="1102.67,159.20,198.67,36.00" data-text-background="#F4EFFF">Routing</text>
+<rect x="1323.3" y="150.2" width="222.7" height="54.0" rx="8.0" fill="#F4EFFF" stroke="#8B5CF6" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="1324.8" y="159.2" width="3" height="36.0" rx="1.5" fill="#8B5CF6" opacity="0.72"/>
+<text x="1434.67" y="168.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="1419.75,160.70,29.83,15.40" data-text-container="1335.33,159.20,198.67,36.00" data-text-background="#F4EFFF">Critic</text>
+<text x="1434.67" y="187.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9" font-weight="normal" fill="#101722" data-text-box="1408.70,181.10,51.94,12.60" data-text-container="1335.33,159.20,198.67,36.00" data-text-background="#F4EFFF">Review loop</text>
+<rect x="844.0" y="234.2" width="716.0" height="132.2" rx="9.0" fill="#FFF2DE" fill-opacity="0.52" stroke="#E69520" stroke-width="1.25"/>
+<g data-icon="engine" aria-hidden="true" transform="translate(854.0 244.2) scale(0.7083)" fill="none" stroke="#E69520" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#E69520"><circle cx="12" cy="12" r="3.5"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"/><path d="m5.3 5.3 2.1 2.1m9.2 9.2 2.1 2.1M18.7 5.3l-2.1 2.1m-9.2 9.2-2.1 2.1"/></g>
+<text x="878.00" y="251.30" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="878.00,242.20,119.13,18.20" data-text-container="878.00,242.20,120.13,18.20" data-text-background="#FFFFFF">Execution &amp; Tools</text>
+<rect x="858.0" y="268.4" width="164.5" height="54.0" rx="8.0" fill="#FFF2DE" stroke="#E69520" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="859.5" y="277.4" width="3" height="36.0" rx="1.5" fill="#E69520" opacity="0.72"/>
+<text x="940.25" y="295.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="918.04,287.70,44.42,15.40" data-text-container="870.00,277.40,140.50,36.00" data-text-background="#FFF2DE">Toolbox</text>
+<rect x="1032.5" y="268.4" width="164.5" height="54.0" rx="8.0" fill="#FFF2DE" stroke="#E69520" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="1034.0" y="277.4" width="3" height="36.0" rx="1.5" fill="#E69520" opacity="0.72"/>
+<text x="1114.75" y="295.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="1076.96,287.70,75.57,15.40" data-text-container="1044.50,277.40,140.50,36.00" data-text-background="#FFF2DE">Task Runtime</text>
+<rect x="1207.0" y="268.4" width="164.5" height="54.0" rx="8.0" fill="#FFF2DE" stroke="#E69520" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="1208.5" y="277.4" width="3" height="36.0" rx="1.5" fill="#E69520" opacity="0.72"/>
+<text x="1289.25" y="295.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="1274.00,287.70,30.51,15.40" data-text-container="1219.00,277.40,140.50,36.00" data-text-background="#FFF2DE">Skills</text>
+<rect x="1381.5" y="268.4" width="164.5" height="54.0" rx="8.0" fill="#FFF2DE" stroke="#E69520" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="1383.0" y="277.4" width="3" height="36.0" rx="1.5" fill="#E69520" opacity="0.72"/>
+<text x="1463.75" y="295.40" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="1424.86,287.70,77.78,15.40" data-text-container="1393.50,277.40,140.50,36.00" data-text-background="#FFF2DE">Figure Engine</text>
+<rect x="858.0" y="332.4" width="688.0" height="28.0" rx="5" fill="#E69520" fill-opacity="0.10" stroke="none"/>
+<text x="858.00" y="346.40" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#101722" data-text-box="858.00,339.40,272.17,14.00" data-text-container="858.00,338.40,688.00,16.00" data-text-background="#FFFFFF">Built-ins: search · code · data · browser · visualization</text>
+<rect x="844.0" y="380.4" width="716.0" height="104.2" rx="9.0" fill="#FFF0F2" fill-opacity="0.52" stroke="#D95772" stroke-width="1.25"/>
+<g data-icon="storage" aria-hidden="true" transform="translate(854.0 390.4) scale(0.7083)" fill="none" stroke="#D95772" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#D95772"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></g>
+<text x="878.00" y="397.50" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="878.00,388.40,121.75,18.20" data-text-container="878.00,388.40,122.75,18.20" data-text-background="#FFFFFF">Memory &amp; Context</text>
+<rect x="858.0" y="414.6" width="164.5" height="54.0" rx="8.0" fill="#FFF0F2" stroke="#D95772" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="859.5" y="423.6" width="3" height="36.0" rx="1.5" fill="#D95772" opacity="0.72"/>
+<text x="940.25" y="441.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="902.02,433.90,76.47,15.40" data-text-container="870.00,423.60,140.50,36.00" data-text-background="#FFF0F2">Long Memory</text>
+<rect x="1032.5" y="414.6" width="164.5" height="54.0" rx="8.0" fill="#FFF0F2" stroke="#D95772" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="1034.0" y="423.6" width="3" height="36.0" rx="1.5" fill="#D95772" opacity="0.72"/>
+<text x="1114.75" y="441.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="1083.75,433.90,61.99,15.40" data-text-container="1044.50,423.60,140.50,36.00" data-text-background="#FFF0F2">Workspace</text>
+<rect x="1207.0" y="414.6" width="164.5" height="54.0" rx="8.0" fill="#FFF0F2" stroke="#D95772" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="1208.5" y="423.6" width="3" height="36.0" rx="1.5" fill="#D95772" opacity="0.72"/>
+<text x="1289.25" y="441.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="1258.15,433.90,62.21,15.40" data-text-container="1219.00,423.60,140.50,36.00" data-text-background="#FFF0F2">Knowledge</text>
+<rect x="1381.5" y="414.6" width="164.5" height="54.0" rx="8.0" fill="#FFF0F2" stroke="#D95772" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="1383.0" y="423.6" width="3" height="36.0" rx="1.5" fill="#D95772" opacity="0.72"/>
+<text x="1463.75" y="441.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="1445.27,433.90,36.97,15.40" data-text-container="1393.50,423.60,140.50,36.00" data-text-background="#FFF0F2">Traces</text>
+<rect x="24.0" y="556.6" width="1552.0" height="282.4" rx="20.0" fill="#FFFFFF" stroke="#3B4556" stroke-width="1.80" filter="url(#shadow-zone)"/>
+<line x1="40.0" y1="598.6" x2="1560.0" y2="598.6" stroke="#E4E8EF" stroke-width="1"/>
+<text x="42.00" y="577.10" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#1D2433" data-text-box="42.00,566.60,103.40,21.00" data-text-container="42.00,566.60,104.40,21.00" data-text-background="#FFFFFF">Infrastructure</text>
+<text x="160.40" y="577.10" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#101722" data-text-box="160.40,568.70,302.41,16.80" data-text-container="160.40,566.60,1397.60,21.00" data-text-background="#FFFFFF">Shared data, messaging, models, and deployment</text>
+<rect x="40.0" y="600.6" width="497.3" height="104.2" rx="9.0" fill="#F7F8FA" fill-opacity="0.52" stroke="#70798A" stroke-width="1.25"/>
+<g data-icon="data" aria-hidden="true" transform="translate(50.0 610.6) scale(0.7083)" fill="none" stroke="#70798A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#70798A"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/><path d="M4 11.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></g>
+<text x="74.00" y="617.70" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="74.00,608.60,98.80,18.20" data-text-container="74.00,608.60,99.80,18.20" data-text-background="#FFFFFF">Data &amp; Storage</text>
+<rect x="54.0" y="634.8" width="149.8" height="54.0" rx="8.0" fill="#FBFCFE" stroke="#70798A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="55.5" y="643.8" width="3" height="36.0" rx="1.5" fill="#70798A" opacity="0.72"/>
+<text x="128.89" y="661.80" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="95.18,654.10,67.43,15.40" data-text-container="66.00,643.80,125.78,36.00" data-text-background="#FBFCFE">PostgreSQL</text>
+<rect x="213.8" y="634.8" width="149.8" height="54.0" rx="8.0" fill="#FBFCFE" stroke="#70798A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="215.3" y="643.8" width="3" height="36.0" rx="1.5" fill="#70798A" opacity="0.72"/>
+<text x="288.67" y="661.80" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="272.78,654.10,31.77,15.40" data-text-container="225.78,643.80,125.78,36.00" data-text-background="#FBFCFE">Redis</text>
+<rect x="373.6" y="634.8" width="149.8" height="54.0" rx="8.0" fill="#FBFCFE" stroke="#70798A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="375.1" y="643.8" width="3" height="36.0" rx="1.5" fill="#70798A" opacity="0.72"/>
+<text x="448.44" y="661.80" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="413.75,654.10,69.40,15.40" data-text-container="385.56,643.80,125.78,36.00" data-text-background="#FBFCFE">Object Store</text>
+<rect x="551.3" y="600.6" width="497.3" height="104.2" rx="9.0" fill="#ECF8E9" fill-opacity="0.52" stroke="#5AA35A" stroke-width="1.25"/>
+<g data-icon="queue" aria-hidden="true" transform="translate(561.3 610.6) scale(0.7083)" fill="none" stroke="#5AA35A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#5AA35A"><path d="M4 7h12M4 12h16M4 17h12"/><path d="m14 4 3 3-3 3M14 14l3 3-3 3"/></g>
+<text x="585.33" y="617.70" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="585.33,608.60,71.22,18.20" data-text-container="585.33,608.60,72.22,18.20" data-text-background="#FFFFFF">Messaging</text>
+<rect x="565.3" y="634.8" width="229.7" height="54.0" rx="8.0" fill="#ECF8E9" stroke="#5AA35A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="566.8" y="643.8" width="3" height="36.0" rx="1.5" fill="#5AA35A" opacity="0.72"/>
+<text x="680.17" y="661.80" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="664.27,654.10,31.78,15.40" data-text-container="577.33,643.80,205.67,36.00" data-text-background="#ECF8E9">Kafka</text>
+<rect x="805.0" y="634.8" width="229.7" height="54.0" rx="8.0" fill="#ECF8E9" stroke="#5AA35A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="806.5" y="643.8" width="3" height="36.0" rx="1.5" fill="#5AA35A" opacity="0.72"/>
+<text x="919.83" y="661.80" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="891.30,654.10,57.06,15.40" data-text-container="817.00,643.80,205.67,36.00" data-text-background="#ECF8E9">Event Bus</text>
+<rect x="1062.7" y="600.6" width="497.3" height="104.2" rx="9.0" fill="#EAF2FF" fill-opacity="0.52" stroke="#4C78D0" stroke-width="1.25"/>
+<g data-icon="artifact" aria-hidden="true" transform="translate(1072.7 610.6) scale(0.7083)" fill="none" stroke="#4C78D0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#4C78D0"><path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></g>
+<text x="1096.67" y="617.70" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="1096.67,608.60,73.49,18.20" data-text-container="1096.67,608.60,74.49,18.20" data-text-background="#FFFFFF">Knowledge</text>
+<rect x="1076.7" y="634.8" width="229.7" height="54.0" rx="8.0" fill="#EAF2FF" stroke="#4C78D0" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="1078.2" y="643.8" width="3" height="36.0" rx="1.5" fill="#4C78D0" opacity="0.72"/>
+<text x="1191.50" y="661.80" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="1163.63,654.10,55.73,15.40" data-text-container="1088.67,643.80,205.67,36.00" data-text-background="#EAF2FF">Vector DB</text>
+<rect x="1316.3" y="634.8" width="229.7" height="54.0" rx="8.0" fill="#EAF2FF" stroke="#4C78D0" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="1317.8" y="643.8" width="3" height="36.0" rx="1.5" fill="#4C78D0" opacity="0.72"/>
+<text x="1431.17" y="661.80" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="1400.36,654.10,61.61,15.40" data-text-container="1328.33,643.80,205.67,36.00" data-text-background="#EAF2FF">Doc Parser</text>
+<rect x="40.0" y="718.8" width="497.3" height="104.2" rx="9.0" fill="#FFF2DE" fill-opacity="0.52" stroke="#E69520" stroke-width="1.25"/>
+<g data-icon="security" aria-hidden="true" transform="translate(50.0 728.8) scale(0.7083)" fill="none" stroke="#E69520" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#E69520"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></g>
+<text x="74.00" y="735.90" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="74.00,726.80,58.18,18.20" data-text-container="74.00,726.80,59.18,18.20" data-text-background="#FFFFFF">Sandbox</text>
+<rect x="54.0" y="753.0" width="229.7" height="54.0" rx="8.0" fill="#FFF2DE" stroke="#E69520" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="55.5" y="762.0" width="3" height="36.0" rx="1.5" fill="#E69520" opacity="0.72"/>
+<text x="168.83" y="780.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="138.37,772.30,60.93,15.40" data-text-container="66.00,762.00,205.67,36.00" data-text-background="#FFF2DE">Containers</text>
+<rect x="293.7" y="753.0" width="229.7" height="54.0" rx="8.0" fill="#FFF2DE" stroke="#E69520" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="295.2" y="762.0" width="3" height="36.0" rx="1.5" fill="#E69520" opacity="0.72"/>
+<text x="408.50" y="780.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="380.63,772.30,55.75,15.40" data-text-container="305.67,762.00,205.67,36.00" data-text-background="#FFF2DE">GPU Jobs</text>
+<rect x="551.3" y="718.8" width="497.3" height="104.2" rx="9.0" fill="#F4EFFF" fill-opacity="0.52" stroke="#8B5CF6" stroke-width="1.25"/>
+<g data-icon="model" aria-hidden="true" transform="translate(561.3 728.8) scale(0.7083)" fill="none" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#8B5CF6"><rect x="4" y="4" width="16" height="4" rx="1.5"/><rect x="4" y="10" width="16" height="4" rx="1.5"/><rect x="4" y="16" width="16" height="4" rx="1.5"/></g>
+<text x="585.33" y="735.90" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="585.33,726.80,107.21,18.20" data-text-container="585.33,726.80,108.21,18.20" data-text-background="#FFFFFF">Model Providers</text>
+<rect x="565.3" y="753.0" width="149.8" height="54.0" rx="8.0" fill="#F4EFFF" stroke="#8B5CF6" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="566.8" y="762.0" width="3" height="36.0" rx="1.5" fill="#8B5CF6" opacity="0.72"/>
+<text x="640.22" y="780.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="619.49,772.30,41.47,15.40" data-text-container="577.33,762.00,125.78,36.00" data-text-background="#F4EFFF">OpenAI</text>
+<rect x="725.1" y="753.0" width="149.8" height="54.0" rx="8.0" fill="#F4EFFF" stroke="#8B5CF6" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="726.6" y="762.0" width="3" height="36.0" rx="1.5" fill="#8B5CF6" opacity="0.72"/>
+<text x="800.00" y="780.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="772.46,772.30,55.07,15.40" data-text-container="737.11,762.00,125.78,36.00" data-text-background="#F4EFFF">Anthropic</text>
+<rect x="884.9" y="753.0" width="149.8" height="54.0" rx="8.0" fill="#F4EFFF" stroke="#8B5CF6" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="886.4" y="762.0" width="3" height="36.0" rx="1.5" fill="#8B5CF6" opacity="0.72"/>
+<text x="959.78" y="780.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="940.00,772.30,39.55,15.40" data-text-container="896.89,762.00,125.78,36.00" data-text-background="#F4EFFF">Gemini</text>
+<rect x="1062.7" y="718.8" width="497.3" height="104.2" rx="9.0" fill="#F7F8FA" fill-opacity="0.52" stroke="#70798A" stroke-width="1.25"/>
+<g data-icon="distribution" aria-hidden="true" transform="translate(1072.7 728.8) scale(0.7083)" fill="none" stroke="#70798A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#70798A"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v5M5 17v-2a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v2"/></g>
+<text x="1096.67" y="735.90" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="1096.67,726.80,78.87,18.20" data-text-container="1096.67,726.80,79.87,18.20" data-text-background="#FFFFFF">Deployment</text>
+<rect x="1076.7" y="753.0" width="229.7" height="54.0" rx="8.0" fill="#FBFCFE" stroke="#70798A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="1078.2" y="762.0" width="3" height="36.0" rx="1.5" fill="#70798A" opacity="0.72"/>
+<text x="1191.50" y="780.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="1171.72,772.30,39.55,15.40" data-text-container="1088.67,762.00,205.67,36.00" data-text-background="#FBFCFE">Docker</text>
+<rect x="1316.3" y="753.0" width="229.7" height="54.0" rx="8.0" fill="#FBFCFE" stroke="#70798A" stroke-width="1.15" filter="url(#shadow-card)"/>
+<rect x="1317.8" y="762.0" width="3" height="36.0" rx="1.5" fill="#70798A" opacity="0.72"/>
+<text x="1431.17" y="780.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="1399.08,772.30,64.18,15.40" data-text-container="1328.33,762.00,205.67,36.00" data-text-background="#FBFCFE">Kubernetes</text>
+<defs><marker id="edge-arrow-b7106b8c76cf" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5E6879"/></marker></defs>
+<path d="M 800.000 234.868 L 800.000 504.600" fill="none" stroke="#5E6879" stroke-opacity="0.65" stroke-width="0.8" stroke-dasharray="3 3"/>
+<rect x="774.0" y="504.6" width="52.0" height="20.0" rx="10" fill="#FFFFFF" stroke="#5E6879" stroke-opacity="0.42" stroke-width="0.9"/>
+<text x="800.00" y="514.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#101722" data-text-box="785.57,507.60,28.85,14.00" data-text-container="784.00,507.60,32.00,14.00" data-text-background="#FFFFFF">gRPC</text>
+<defs><marker id="edge-arrow-ab86de2ae007" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5E6879"/></marker></defs>
+<rect x="242.3" y="505.6" width="98.2" height="20.0" rx="10" fill="#FFFFFF" stroke="#5E6879" stroke-opacity="0.42" stroke-width="0.9"/>
+<text x="291.40" y="515.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#101722" data-text-box="252.82,508.60,77.16,14.00" data-text-container="252.32,508.60,78.16,14.00" data-text-background="#FFFFFF">Data · Sandbox</text>
+<defs><marker id="edge-arrow-e389e61fc113" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5E6879"/></marker></defs>
+<rect x="1242.2" y="505.6" width="101.7" height="20.0" rx="10" fill="#FFFFFF" stroke="#5E6879" stroke-opacity="0.42" stroke-width="0.9"/>
+<text x="1293.08" y="515.60" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#101722" data-text-box="1252.73,508.60,80.71,14.00" data-text-container="1252.23,508.60,81.71,14.00" data-text-background="#FFFFFF">Models · Events</text>
+<g id="figure-provenance"><rect x="0" y="863" width="1600" height="63.8" fill="#FCFCFB"/>
+<text x="24.00" y="882.70" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1D2433" data-text-box="24.00,875.00,126.42,15.40" data-text-container="24.00,875.00,1552.00,35.80" data-text-background="#FCFCFB">Conceptual illustration</text>
+<text x="24.00" y="903.10" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="normal" fill="#101722" data-text-box="24.00,895.40,371.80,15.40" data-text-container="24.00,875.00,1552.00,35.80" data-text-background="#FCFCFB">Example system landscape; not a vendor standard or deployed product.</text>
+</g>
+</svg>

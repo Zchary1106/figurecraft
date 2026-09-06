@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "provenance": {"type": "conceptual", "summary": "Illustrative service topology; not a deployed product."},
+  "kind": "diagram.architecture",
+  "title": "Inference architecture",
+  "view": {"type": "container", "audience": "engineering"},
+  "nodes": [
+    {"id": "client", "label": "Client", "subtitle": "Web · Mobile", "layer": 0, "shape": "pill"},
+    {"id": "api", "label": "API Gateway", "subtitle": "Auth · Routing", "layer": 1},
+    {"id": "model", "label": "Model Service", "subtitle": "GPU inference", "layer": 2, "group": "compute"},
+    {"id": "cache", "label": "Feature Cache", "subtitle": "Low-latency lookup", "shape": "database", "layer": 2, "group": "compute"},
+    {"id": "store", "label": "Result Store", "subtitle": "Durable records", "shape": "database", "layer": 3}
+  ],
+  "edges": [
+    {"id": "client-api", "from": "client", "to": "api", "label": "calls", "technology": "HTTPS", "source_port": "E", "target_port": "W"},
+    {"from": "api", "to": "model"},
+    {"from": "model", "to": "cache", "style": "dashed"},
+    {"from": "model", "to": "store"}
+  ],
+  "style": {"preset": "paper-light"},
+  "layout": {"direction": "LR"},
+  "output": {"primary": "svg"}
+}

@@ -1,0 +1,22 @@
+{
+  "name": "paper-light",
+  "background": "#FFFFFF",
+  "foreground": "#172033",
+  "muted": "#667085",
+  "grid": "#E4E7EC",
+  "edge": "#667085",
+  "node_fill": "#F8FAFC",
+  "node_stroke": "#C7D0DD",
+  "node_fills": ["#EEF4FF", "#ECFDF7", "#FFF7E8", "#F5F1FF", "#FFF0F3", "#EAF9FC"],
+  "accents": ["#3569E8", "#169B78", "#E99525", "#815AC0", "#D95670", "#138FA3"],
+  "group_fill": "#F8FAFC",
+  "group_stroke": "#C7D0DD",
+  "lane_even": "#F8FAFC",
+  "lane_odd": "#FFFFFF",
+  "font_family": "DejaVu Sans",
+  "svg_font_family": "Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif",
+  "font_size": 10,
+  "line_width": 1.4,
+  "interval_alpha": 0.16,
+  "palette": ["#3569E8", "#E76F51", "#169B78", "#815AC0", "#E9A23B", "#138FA3", "#D95670", "#344054"]
+}

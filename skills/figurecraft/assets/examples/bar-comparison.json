@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "kind": "chart.bar",
+  "title": "Latency comparison",
+  "provenance": {"type": "conceptual", "summary": "Synthetic values for layout demonstration; not benchmark evidence."},
+  "data": {"columns": {"workload": ["Small", "Medium", "Large"], "baseline": [18, 32, 56], "candidate": [15, 28, 49]}},
+  "series": [{"x": "workload", "y": "baseline", "label": "Baseline"}, {"x": "workload", "y": "candidate", "label": "Candidate"}],
+  "semantics": {"x_label": "Workload", "y_label": "Latency", "y_unit": "ms"},
+  "style": {"preset": "paper-light", "annotate_values": true},
+  "layout": {"medium": "paper-double", "aspect_ratio": 1.6},
+  "output": {"primary": "svg", "additional": ["png"], "dpi": 300}
+}

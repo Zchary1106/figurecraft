@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1404" height="329" viewBox="0 0 1404 329" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">Encoder-classifier network</title>
+<desc id="figure-desc">diagram.neural-network with 6 nodes</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#667085"/></marker>
+<filter id="generic-card-shadow" x="-14%" y="-16%" width="128%" height="138%"><feDropShadow dx="0" dy="2" stdDeviation="2.8" flood-color="#172033" flood-opacity="0.06"/></filter>
+<filter id="generic-group-shadow" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="2.5" stdDeviation="3.5" flood-color="#172033" flood-opacity="0.05"/></filter>
+</defs>
+<rect x="0" y="0" width="1404" height="268" fill="#FFFFFF"/>
+<rect x="510.0" y="58.0" width="171.3" height="126.0" rx="18" fill="#FFF7E8" fill-opacity="0.20" stroke="#E99525" stroke-opacity="0.42" stroke-width="1.2" filter="url(#generic-group-shadow)"/>
+<circle cx="528.0" cy="79.0" r="10.0" fill="#E99525"/>
+<text x="528.0" y="79.5" dominant-baseline="middle" text-anchor="middle" fill="#101722" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="8.5" font-weight="700">01</text>
+<text x="546.00" y="78.00" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#101722" data-text-box="546.00,71.00,49.49,14.00" data-text-container="546.00,63.00,123.28,30.00" data-text-background="#FFFFFF">backbone</text>
+<line x1="522.0" y1="96.0" x2="669.3" y2="96.0" stroke="#E99525" stroke-opacity="0.24" stroke-width="1"/>
+<defs><marker id="generic-edge-0" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#667085"/></marker></defs>
+<path data-edge-id="input--embed" d="M 236.000 134.000 L 316.000 134.000" fill="none" stroke="#667085" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#generic-edge-0)"/>
+<defs><marker id="generic-edge-1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#667085"/></marker></defs>
+<path data-edge-id="embed--encoder" d="M 448.000 134.000 L 528.000 134.000" fill="none" stroke="#667085" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#generic-edge-1)"/>
+<defs><marker id="generic-edge-2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#667085"/></marker></defs>
+<path data-edge-id="encoder--pool" d="M 663.275 134.000 L 743.275 134.000" fill="none" stroke="#667085" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#generic-edge-2)"/>
+<defs><marker id="generic-edge-3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#667085"/></marker></defs>
+<path data-edge-id="pool--head" d="M 875.275 134.000 L 955.275 134.000" fill="none" stroke="#667085" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#generic-edge-3)"/>
+<defs><marker id="generic-edge-4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#667085"/></marker></defs>
+<path data-edge-id="head--output" d="M 1087.275 134.000 L 1167.275 134.000" fill="none" stroke="#667085" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#generic-edge-4)"/>
+<rect x="104.0" y="104.0" width="120.0" height="60.0" rx="8" fill="#EEF4FF" stroke="#3569E8" stroke-width="1.1" opacity="0.50" filter="url(#generic-card-shadow)"/>
+<rect x="110.0" y="98.0" width="120.0" height="60.0" rx="8" fill="#EEF4FF" stroke="#3569E8" stroke-width="1.1" opacity="0.72" filter="url(#generic-card-shadow)"/>
+<rect x="116.0" y="92.0" width="120.0" height="60.0" rx="8" fill="#EEF4FF" stroke="#3569E8" stroke-width="1.1" opacity="1" filter="url(#generic-card-shadow)"/>
+<text x="170.00" y="125.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#172033" data-text-box="157.05,118.90,25.90,14.00" data-text-container="118.00,116.00,104.00,36.00" data-text-background="#EEF4FF">Input</text>
+<text x="170.00" y="143.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8" font-weight="normal" fill="#667085" data-text-box="151.99,137.90,36.02,11.20" data-text-container="118.00,116.00,104.00,36.00" data-text-background="#EEF4FF">B × T × D</text>
+<rect x="316.0" y="104.0" width="132.0" height="60.0" rx="12.0" data-node-id="embed" fill="#ECFDF7" stroke="#169B78" stroke-width="1.25" filter="url(#generic-card-shadow)"/>
+<text x="382.00" y="125.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#172033" data-text-box="339.83,118.90,84.34,14.00" data-text-container="330.00,116.00,104.00,36.00" data-text-background="#ECFDF7">Token + Position</text>
+<text x="382.00" y="143.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8" font-weight="normal" fill="#667085" data-text-box="360.53,137.90,42.95,11.20" data-text-container="330.00,116.00,104.00,36.00" data-text-background="#ECFDF7">Embedding</text>
+<rect x="528.0" y="104.0" width="135.3" height="60.0" rx="12.0" data-node-id="encoder" fill="#FFF7E8" stroke="#E99525" stroke-width="1.25" filter="url(#generic-card-shadow)"/>
+<text x="595.64" y="125.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#172033" data-text-box="542.00,118.90,107.28,14.00" data-text-container="542.00,116.00,107.28,36.00" data-text-background="#FFF7E8">Transformer Encoder</text>
+<text x="595.64" y="143.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8" font-weight="normal" fill="#667085" data-text-box="562.15,137.90,66.98,11.20" data-text-container="542.00,116.00,107.28,36.00" data-text-background="#FFF7E8">6 repeated blocks</text>
+<rect x="743.3" y="104.0" width="132.0" height="60.0" rx="12.0" data-node-id="pool" fill="#F5F1FF" stroke="#815AC0" stroke-width="1.25" filter="url(#generic-card-shadow)"/>
+<text x="809.28" y="125.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#172033" data-text-box="774.82,118.90,68.92,14.00" data-text-container="757.28,116.00,104.00,36.00" data-text-background="#F5F1FF">Mean Pooling</text>
+<text x="809.28" y="143.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8" font-weight="normal" fill="#101722" data-text-box="771.53,137.90,75.49,11.20" data-text-container="757.28,116.00,104.00,36.00" data-text-background="#F5F1FF">Sequence reduction</text>
+<rect x="955.3" y="104.0" width="132.0" height="60.0" rx="12.0" data-node-id="head" fill="#FFF0F3" stroke="#D95670" stroke-width="1.25" filter="url(#generic-card-shadow)"/>
+<text x="1021.28" y="125.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#172033" data-text-box="980.03,118.90,82.50,14.00" data-text-container="969.28,116.00,104.00,36.00" data-text-background="#FFF0F3">Linear Classifier</text>
+<text x="1021.28" y="143.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8" font-weight="normal" fill="#667085" data-text-box="1008.56,137.90,25.44,11.20" data-text-container="969.28,116.00,104.00,36.00" data-text-background="#FFF0F3">D → C</text>
+<rect x="1167.3" y="104.0" width="132.0" height="60.0" rx="30.0" data-node-id="output" fill="#EAF9FC" stroke="#138FA3" stroke-width="1.25" filter="url(#generic-card-shadow)"/>
+<text x="1233.28" y="125.90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#172033" data-text-box="1185.84,118.90,94.87,14.00" data-text-container="1181.28,116.00,104.00,36.00" data-text-background="#EAF9FC">Class Probabilities</text>
+<text x="1233.28" y="143.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8" font-weight="normal" fill="#667085" data-text-box="1222.55,137.90,21.45,11.20" data-text-container="1181.28,116.00,104.00,36.00" data-text-background="#EAF9FC">B × C</text>
+<rect x="28" y="11" width="4" height="38" rx="2" fill="#3569E8"/>
+<text x="44.00" y="20.80" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#172033" data-text-box="44.00,11.00,189.62,19.60" data-text-container="44.00,11.00,1316.00,19.60" data-text-background="#FFFFFF">Encoder-classifier network</text>
+<g id="figure-provenance"><rect x="0" y="268" width="1404" height="61" fill="#FFFFFF"/>
+<text x="24.00" y="287.00" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#172033" data-text-box="24.00,280.00,114.86,14.00" data-text-container="24.00,280.00,1356.00,33.00" data-text-background="#FFFFFF">Conceptual illustration</text>
+<text x="24.00" y="306.00" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="10" font-weight="normal" fill="#667085" data-text-box="24.00,299.00,284.01,14.00" data-text-container="24.00,280.00,1356.00,33.00" data-text-background="#FFFFFF">Example neural graph; no measured performance is implied.</text>
+</g>
+</svg>

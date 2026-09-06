@@ -1,0 +1,260 @@
+{
+  "version": "1.0",
+  "kind": "diagram.neural-network",
+  "title": "Sparse mixture-of-experts transformer",
+  "caption": "Pre-normalized attention followed by learned Top-2 token routing across parallel feed-forward experts",
+  "provenance": {
+    "type": "conceptual",
+    "summary": "Illustrative sparse MoE architecture; routing probabilities, dimensions, and topology are synthetic and no measured performance is implied."
+  },
+  "nodes": [
+    {
+      "id": "tokens",
+      "label": "Input tokens",
+      "subtitle": "B x T",
+      "role": "input",
+      "shape": "tensor",
+      "layer": 0
+    },
+    {
+      "id": "embedding",
+      "label": "Token + position embedding",
+      "subtitle": "B x T x D",
+      "role": "method",
+      "shape": "tensor",
+      "layer": 1
+    },
+    {
+      "id": "attention-norm",
+      "label": "LayerNorm",
+      "subtitle": "Pre-normalization",
+      "role": "operation",
+      "shape": "rounded",
+      "layer": 2,
+      "group": "self-attention sublayer"
+    },
+    {
+      "id": "attention",
+      "label": "Causal self-attention",
+      "subtitle": "H heads x rotary position",
+      "role": "compute",
+      "layer": 3,
+      "group": "self-attention sublayer"
+    },
+    {
+      "id": "attention-add",
+      "label": "Add",
+      "subtitle": "Attention residual",
+      "role": "operation",
+      "shape": "pill",
+      "layer": 4,
+      "group": "self-attention sublayer"
+    },
+    {
+      "id": "moe-norm",
+      "label": "LayerNorm",
+      "subtitle": "Pre-normalization",
+      "role": "operation",
+      "shape": "rounded",
+      "layer": 5,
+      "group": "sparse MoE sublayer"
+    },
+    {
+      "id": "router",
+      "label": "Learned token router",
+      "subtitle": "Softmax gates x Top-2",
+      "role": "decision",
+      "shape": "diamond",
+      "layer": 6,
+      "group": "sparse MoE sublayer"
+    },
+    {
+      "id": "expert-1",
+      "label": "Expert 1",
+      "subtitle": "D -> 4D -> D x SwiGLU",
+      "role": "compute",
+      "layer": 7,
+      "group": "parallel feed-forward experts"
+    },
+    {
+      "id": "expert-2",
+      "label": "Expert 2",
+      "subtitle": "D -> 4D -> D x SwiGLU",
+      "role": "compute",
+      "layer": 7,
+      "group": "parallel feed-forward experts"
+    },
+    {
+      "id": "expert-3",
+      "label": "Expert 3",
+      "subtitle": "D -> 4D -> D x SwiGLU",
+      "role": "compute",
+      "layer": 7,
+      "group": "parallel feed-forward experts"
+    },
+    {
+      "id": "expert-4",
+      "label": "Expert 4",
+      "subtitle": "D -> 4D -> D x SwiGLU",
+      "role": "compute",
+      "layer": 7,
+      "group": "parallel feed-forward experts"
+    },
+    {
+      "id": "shared-expert",
+      "label": "Shared expert",
+      "subtitle": "Always active FFN",
+      "role": "method",
+      "layer": 7,
+      "group": "parallel feed-forward experts"
+    },
+    {
+      "id": "combine",
+      "label": "Weighted expert combine",
+      "subtitle": "Sum selected outputs",
+      "role": "method",
+      "layer": 8,
+      "group": "sparse MoE sublayer"
+    },
+    {
+      "id": "moe-add",
+      "label": "Add",
+      "subtitle": "MoE residual",
+      "role": "operation",
+      "shape": "pill",
+      "layer": 9,
+      "group": "sparse MoE sublayer"
+    },
+    {
+      "id": "repeat",
+      "label": "Transformer stack x12",
+      "subtitle": "Attention + sparse MoE",
+      "role": "compute",
+      "layer": 10,
+      "group": "decoder backbone"
+    },
+    {
+      "id": "final-norm",
+      "label": "Final LayerNorm",
+      "subtitle": "B x T x D",
+      "role": "operation",
+      "shape": "rounded",
+      "layer": 11,
+      "group": "decoder backbone"
+    },
+    {
+      "id": "lm-head",
+      "label": "Language-model head",
+      "subtitle": "D x vocabulary",
+      "role": "method",
+      "layer": 12
+    },
+    {
+      "id": "probabilities",
+      "label": "Next-token probabilities",
+      "subtitle": "B x T x |V|",
+      "role": "output",
+      "shape": "pill",
+      "layer": 13
+    }
+  ],
+  "edges": [
+    {"id": "tokenize", "from": "tokens", "to": "embedding"},
+    {"id": "attention-pre-norm", "from": "embedding", "to": "attention-norm"},
+    {"id": "attend", "from": "attention-norm", "to": "attention"},
+    {"id": "attention-output", "from": "attention", "to": "attention-add"},
+    {
+      "id": "attention-residual",
+      "from": "embedding",
+      "to": "attention-add",
+      "label": "residual",
+      "kind": "feedback",
+      "style": "dashed",
+      "source_port": "N",
+      "target_port": "N"
+    },
+    {"id": "moe-pre-norm", "from": "attention-add", "to": "moe-norm"},
+    {"id": "route-tokens", "from": "moe-norm", "to": "router"},
+    {
+      "id": "dispatch-1",
+      "from": "router",
+      "to": "expert-1",
+      "label": "gate p1",
+      "kind": "control"
+    },
+    {
+      "id": "dispatch-2",
+      "from": "router",
+      "to": "expert-2",
+      "label": "gate p2",
+      "kind": "control"
+    },
+    {
+      "id": "dispatch-3",
+      "from": "router",
+      "to": "expert-3",
+      "label": "gate p3",
+      "kind": "control"
+    },
+    {
+      "id": "dispatch-4",
+      "from": "router",
+      "to": "expert-4",
+      "label": "gate p4",
+      "kind": "control"
+    },
+    {
+      "id": "dispatch-shared",
+      "from": "moe-norm",
+      "to": "shared-expert",
+      "label": "all tokens",
+      "kind": "state",
+      "style": "dashed"
+    },
+    {"id": "expert-1-output", "from": "expert-1", "to": "combine"},
+    {"id": "expert-2-output", "from": "expert-2", "to": "combine"},
+    {"id": "expert-3-output", "from": "expert-3", "to": "combine"},
+    {"id": "expert-4-output", "from": "expert-4", "to": "combine"},
+    {"id": "shared-output", "from": "shared-expert", "to": "combine"},
+    {"id": "combine-output", "from": "combine", "to": "moe-add"},
+    {
+      "id": "moe-residual",
+      "from": "attention-add",
+      "to": "moe-add",
+      "label": "residual",
+      "kind": "feedback",
+      "style": "dashed",
+      "source_port": "S",
+      "target_port": "S"
+    },
+    {"id": "repeat-blocks", "from": "moe-add", "to": "repeat"},
+    {"id": "normalize-output", "from": "repeat", "to": "final-norm"},
+    {"id": "project-vocabulary", "from": "final-norm", "to": "lm-head"},
+    {"id": "softmax", "from": "lm-head", "to": "probabilities"}
+  ],
+  "style": {
+    "preset": "editorial-contrast",
+    "visual_grammar": "semantic",
+    "overrides": {
+      "font_size": 12
+    }
+  },
+  "layout": {
+    "direction": "LR",
+    "medium": "web",
+    "density": "comfortable",
+    "column_gap": 84,
+    "row_gap": 24,
+    "margin": 48,
+    "optimize": false
+  },
+  "output": {
+    "primary": "svg",
+    "additional": ["drawio"]
+  },
+  "assumptions": [
+    "This is an original conceptual MoE diagram created to demonstrate branching neural-network layouts.",
+    "The four displayed routed experts represent a larger configurable expert pool.",
+    "Top-2 routing is shown structurally; the displayed gate labels do not imply fixed probabilities."
+  ]
+}

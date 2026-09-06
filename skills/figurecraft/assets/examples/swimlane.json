@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "provenance": {"type": "conceptual", "summary": "Illustrative responsibilities and handoffs."},
+  "kind": "diagram.swimlane",
+  "title": "Model review workflow",
+  "lanes": [
+    {"id": "researcher", "label": "Researcher"},
+    {"id": "platform", "label": "Platform"},
+    {"id": "reviewer", "label": "Reviewer"}
+  ],
+  "nodes": [
+    {"id": "submit", "label": "Submit model", "lane": "researcher", "layer": 0},
+    {"id": "validate", "label": "Validate package", "lane": "platform", "layer": 1},
+    {"id": "review", "label": "Review metrics", "lane": "reviewer", "layer": 2},
+    {"id": "publish", "label": "Publish result", "lane": "platform", "layer": 3}
+  ],
+  "edges": [
+    {"from": "submit", "to": "validate", "label": "package"},
+    {"from": "validate", "to": "review", "label": "report"},
+    {"from": "review", "to": "publish", "label": "approval"}
+  ],
+  "style": {"preset": "paper-light"},
+  "layout": {"direction": "LR"},
+  "output": {"primary": "svg"}
+}

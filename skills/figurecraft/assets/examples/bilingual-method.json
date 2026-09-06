@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "kind": "diagram.research-framework",
+  "language": "zh-CN",
+  "title": "数据到证据 / Data to evidence",
+  "provenance": {"type": "conceptual", "summary": "中英混排示例；不代表真实实验结果。"},
+  "nodes": [
+    {"id": "data", "label": "输入数据 / Input", "subtitle": "张量 H×W×C；保留原始记录", "role": "data", "layer": 0},
+    {"id": "method", "label": "分析方法 / Method", "subtitle": "参数 μ = 0.1；方法由研究者指定", "role": "method", "layer": 1},
+    {"id": "evidence", "label": "研究证据 / Evidence", "subtitle": "报告单位、误差定义和限制", "role": "outcome", "layer": 2}
+  ],
+  "edges": [
+    {"id": "prepare", "from": "data", "to": "method", "label": "预处理 / Prepare"},
+    {"id": "report", "from": "method", "to": "evidence", "label": "分析并报告"}
+  ],
+  "style": {"preset": "paper-light", "semantic_shapes": true, "overrides": {"font_size": 16}},
+  "layout": {"direction": "LR", "medium": "paper-double", "margin": 24, "gap": 56},
+  "output": {"primary": "svg", "additional": ["drawio"]}
+}

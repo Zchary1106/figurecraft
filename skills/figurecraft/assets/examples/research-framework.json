@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "kind": "diagram.research-framework",
+  "title": "Evidence-grounded research",
+  "provenance": {"type": "conceptual", "summary": "Methodology example; evidence and findings must come from an actual study."},
+  "framework_stages": [
+    {"id": "question", "title": "Research question", "role": "input", "items": [
+      {"id": "scope", "label": "Define scope", "subtitle": "Population and context"},
+      {"id": "hypothesis", "label": "State hypothesis", "subtitle": "A falsifiable claim"}
+    ]},
+    {"id": "study", "title": "Study design", "role": "method", "connect_items": true, "items": [
+      {"id": "protocol", "label": "Define protocol", "subtitle": "Measures and controls"},
+      {"id": "collect", "label": "Collect observations", "subtitle": "Record provenance"}
+    ]},
+    {"id": "analysis", "title": "Analysis", "role": "evidence", "items": [
+      {"id": "estimate", "label": "Estimate effects", "subtitle": "Declare uncertainty"},
+      {"id": "limitations", "label": "Assess limitations", "subtitle": "Bias and generalizability"}
+    ]}
+  ],
+  "outcome": {"label": "Supported contribution", "subtitle": "Separate evidence from interpretation"},
+  "style": {"preset": "warm-academic"},
+  "layout": {"width": 900, "medium": "web"},
+  "output": {"primary": "svg", "additional": ["drawio"]}
+}

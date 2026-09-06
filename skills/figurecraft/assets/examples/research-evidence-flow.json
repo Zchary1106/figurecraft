@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "kind": "diagram.research-framework",
+  "title": "From research question to defensible evidence",
+  "caption": "Two analysis branches share a dataset and converge on an explicit validity decision.",
+  "provenance": {"type": "conceptual", "summary": "Method-design illustration; no measured results are claimed."},
+  "nodes": [
+    {"id": "question", "label": "Research question", "subtitle": "Claim and evaluation criteria", "role": "input", "layer": 0},
+    {"id": "data", "label": "Study dataset", "subtitle": "Sampling, units and provenance", "role": "data", "layer": 1},
+    {"id": "baseline", "label": "Baseline analysis", "subtitle": "Reference method and controls", "role": "method", "layer": 2},
+    {"id": "proposed", "label": "Proposed method", "subtitle": "Declared intervention", "role": "method", "layer": 2},
+    {"id": "robustness", "label": "Sensitivity analysis", "subtitle": "Assumptions and alternative settings", "role": "method", "layer": 3},
+    {"id": "comparison", "label": "Comparative evidence", "subtitle": "Effect sizes and uncertainty", "role": "evidence", "layer": 3},
+    {"id": "validity", "label": "Claim supported?", "role": "decision", "layer": 4},
+    {"id": "report", "label": "Research report", "subtitle": "Findings, limitations and reproducibility", "role": "report", "layer": 5}
+  ],
+  "edges": [
+    {"from": "question", "to": "data", "label": "design study"},
+    {"from": "data", "to": "baseline", "label": "reference branch"},
+    {"from": "data", "to": "proposed", "label": "method branch"},
+    {"from": "baseline", "to": "comparison", "label": "reference estimates"},
+    {"from": "proposed", "to": "comparison", "label": "method estimates"},
+    {"from": "proposed", "to": "robustness", "label": "stress assumptions"},
+    {"from": "comparison", "to": "validity"},
+    {"from": "robustness", "to": "validity"},
+    {"from": "validity", "to": "report", "label": "report decision"}
+  ],
+  "style": {"preset": "warm-academic", "visual_grammar": "semantic", "overrides": {"font_size": 13}},
+  "layout": {"direction": "LR", "medium": "web", "density": "comfortable", "margin": 48, "optimize": true},
+  "output": {"primary": "svg", "additional": ["drawio"]}
+}

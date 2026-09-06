@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "kind": "diagram.architecture",
+  "title": "Multi-agent task coordination",
+  "caption": "Who coordinates work and owns the result?",
+  "view": {"type": "overview", "scope": "control and delegation"},
+  "provenance": {"type": "conceptual", "summary": "Illustrative pattern; not a vendor architecture or implemented product."},
+  "nodes": [
+    {"id": "user", "label": "User", "role": "actor", "layer": 0},
+    {"id": "coordinator", "label": "Coordinator", "subtitle": "Owns the task and final response", "role": "method", "layer": 1},
+    {"id": "researcher", "label": "Research agent", "subtitle": "Collects relevant evidence", "role": "method", "layer": 2},
+    {"id": "executor", "label": "Execution agent", "subtitle": "Uses permitted tools", "role": "method", "layer": 2},
+    {"id": "reviewer", "label": "Review agent", "subtitle": "Checks the proposed result", "role": "method", "layer": 3},
+    {"id": "result", "label": "Reviewed result", "role": "outcome", "layer": 4}
+  ],
+  "edges": [
+    {"id": "request", "from": "user", "to": "coordinator", "label": "requests"},
+    {"id": "research", "from": "coordinator", "to": "researcher", "label": "delegates research"},
+    {"id": "execute", "from": "coordinator", "to": "executor", "label": "delegates execution"},
+    {"id": "evidence", "from": "researcher", "to": "reviewer", "label": "provides evidence"},
+    {"id": "candidate", "from": "executor", "to": "reviewer", "label": "submits candidate"},
+    {"id": "delivery", "from": "reviewer", "to": "result", "label": "approves"}
+  ],
+  "style": {"preset": "editorial-contrast", "semantic_shapes": true},
+  "layout": {"direction": "TB", "medium": "web", "margin": 32, "gap": 56},
+  "output": {"primary": "svg", "additional": ["drawio"]}
+}

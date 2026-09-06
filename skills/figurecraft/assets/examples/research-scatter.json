@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "kind": "chart.scatter",
+  "title": "Representation quality tracks downstream accuracy",
+  "caption": "Synthetic study cohorts shown for visual demonstration",
+  "provenance": {
+    "type": "conceptual",
+    "summary": "Synthetic observations for layout demonstration; not experimental evidence."
+  },
+  "data": {
+    "columns": {
+      "baseline_score": [0.31, 0.38, 0.42, 0.47, 0.51, 0.56, 0.61, 0.65, 0.71, 0.76],
+      "baseline_accuracy": [61.4, 63.1, 65.8, 66.2, 68.7, 70.1, 72.8, 74.0, 76.1, 77.6],
+      "proposed_score": [0.39, 0.44, 0.50, 0.55, 0.60, 0.66, 0.70, 0.75, 0.81, 0.86],
+      "proposed_accuracy": [65.2, 67.5, 69.1, 71.8, 73.6, 76.2, 77.4, 79.8, 82.1, 84.0]
+    }
+  },
+  "series": [
+    {
+      "x": "baseline_score",
+      "y": "baseline_accuracy",
+      "label": "Baseline",
+      "marker": "o",
+      "size": 48,
+      "alpha": 0.82
+    },
+    {
+      "x": "proposed_score",
+      "y": "proposed_accuracy",
+      "label": "Proposed",
+      "marker": "D",
+      "size": 48,
+      "alpha": 0.9
+    }
+  ],
+  "semantics": {
+    "x_label": "Representation quality",
+    "y_label": "Downstream accuracy",
+    "y_unit": "%"
+  },
+  "style": {
+    "preset": "editorial-contrast"
+  },
+  "layout": {
+    "medium": "paper-double",
+    "aspect_ratio": 1.65
+  },
+  "output": {
+    "primary": "svg",
+    "additional": ["png"],
+    "dpi": 300
+  }
+}

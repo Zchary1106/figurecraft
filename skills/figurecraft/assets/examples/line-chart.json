@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "provenance": {"type": "conceptual", "summary": "Synthetic values for layout demonstration; not benchmark evidence."},
+  "kind": "chart.line",
+  "title": "Validation accuracy",
+  "intent": "compare-trends",
+  "audience": "academic",
+  "data": {
+    "columns": {
+      "epoch": [1, 2, 3, 4, 5],
+      "baseline": [71.2, 75.1, 77.4, 78.2, 78.6],
+      "proposed": [72.5, 77.3, 80.1, 81.4, 82.0]
+    }
+  },
+  "series": [
+    {"x": "epoch", "y": "baseline", "label": "Baseline"},
+    {"x": "epoch", "y": "proposed", "label": "Proposed"}
+  ],
+  "semantics": {"x_label": "Epoch", "y_label": "Accuracy", "y_unit": "%"},
+  "style": {"preset": "paper-light", "direct_labels": true},
+  "layout": {"width_mm": 178, "aspect_ratio": 1.6},
+  "output": {"primary": "svg", "additional": ["png"], "dpi": 300}
+}

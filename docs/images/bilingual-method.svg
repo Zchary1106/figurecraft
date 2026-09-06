@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="figure-title figure-desc" width="180mm" height="58.61985472mm" viewBox="0 0 826 269" preserveAspectRatio="xMidYMid meet">
+<title id="figure-title">数据到证据 / Data to evidence</title>
+<desc id="figure-desc">diagram.research-framework with 3 nodes</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#667085"/></marker>
+<filter id="generic-card-shadow" x="-14%" y="-16%" width="128%" height="138%"><feDropShadow dx="0" dy="2" stdDeviation="2.8" flood-color="#172033" flood-opacity="0.06"/></filter>
+<filter id="generic-group-shadow" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="2.5" stdDeviation="3.5" flood-color="#172033" flood-opacity="0.05"/></filter>
+</defs>
+<rect x="0" y="0" width="826" height="194" fill="#FFFFFF"/>
+<defs><marker id="generic-edge-0" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#667085"/></marker></defs>
+<path data-edge-id="prepare" d="M 242.452 107.500 L 298.452 107.500" fill="none" stroke="#667085" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#generic-edge-0)"/>
+<defs><marker id="generic-edge-1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#667085"/></marker></defs>
+<path data-edge-id="report" d="M 539.893 107.500 L 595.893 107.500" fill="none" stroke="#667085" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#generic-edge-1)"/>
+<path d="M 270.452 107.500 L 270.452 155.000" fill="none" stroke="#667085" stroke-opacity="0.65" stroke-width="0.8" stroke-dasharray="3 3"/>
+<path d="M 567.893 107.500 L 567.893 147.000" fill="none" stroke="#667085" stroke-opacity="0.65" stroke-width="0.8" stroke-dasharray="3 3"/>
+<rect x="201.4" y="155.0" width="138.2" height="27.0" rx="10" fill="#FFFFFF" stroke="#E4E7EC" stroke-width="0.8"/>
+<text x="270.45" y="168.50" text-anchor="middle" dominant-baseline="middle" font-family="Lantinghei SC, Arial" font-size="15" font-weight="bold" fill="#667085" data-text-box="210.36,158.00,120.19,21.00" data-text-container="210.36,158.00,120.19,21.00" data-text-background="#FFFFFF">预处理 / Prepare</text>
+<rect x="519.1" y="147.0" width="97.5" height="27.0" rx="10" fill="#FFFFFF" stroke="#E4E7EC" stroke-width="0.8"/>
+<text x="567.89" y="160.50" text-anchor="middle" dominant-baseline="middle" font-family="Lantinghei SC" font-size="15" font-weight="bold" fill="#667085" data-text-box="528.14,150.00,79.50,21.00" data-text-container="528.14,150.00,79.50,21.00" data-text-background="#FFFFFF">分析并报告</text>
+<path d="M 24.0 74.0 C 24.0 62.0, 242.5 62.0, 242.5 74.0 L 242.5 141.0 C 242.5 153.0, 24.0 153.0, 24.0 141.0 Z" data-node-id="data" fill="#EEF4FF" stroke="#3569E8" stroke-width="1.25" filter="url(#generic-card-shadow)"/>
+<ellipse cx="133.2" cy="74.0" rx="109.2" ry="10" fill="#EEF4FF" stroke="#3569E8" stroke-width="1.25"/>
+<text x="133.23" y="102.20" text-anchor="middle" dominant-baseline="middle" font-family="Lantinghei SC, Arial" font-size="16" font-weight="bold" fill="#172033" data-text-box="71.49,91.00,123.47,22.40" data-text-container="38.00,90.00,190.45,49.00" data-text-background="#EEF4FF">输入数据 / Input</text>
+<text x="133.23" y="128.20" text-anchor="middle" dominant-baseline="middle" font-family="Lantinghei SC, Arial" font-size="14" font-weight="normal" fill="#667085" data-text-box="38.00,118.40,190.45,19.60" data-text-container="38.00,90.00,190.45,49.00" data-text-background="#EEF4FF">张量 H×W×C；保留原始记录</text>
+<rect x="298.5" y="72.0" width="241.4" height="71.0" rx="12.0" data-node-id="method" fill="#ECFDF7" stroke="#169B78" stroke-width="1.25" filter="url(#generic-card-shadow)"/>
+<text x="419.17" y="95.20" text-anchor="middle" dominant-baseline="middle" font-family="Lantinghei SC, Arial" font-size="16" font-weight="bold" fill="#172033" data-text-box="348.01,84.00,142.32,22.40" data-text-container="312.45,84.00,213.44,47.00" data-text-background="#ECFDF7">分析方法 / Method</text>
+<text x="419.17" y="121.20" text-anchor="middle" dominant-baseline="middle" font-family="Lantinghei SC, Arial" font-size="14" font-weight="normal" fill="#667085" data-text-box="312.45,111.40,213.44,19.60" data-text-container="312.45,84.00,213.44,47.00" data-text-background="#ECFDF7">参数 μ = 0.1；方法由研究者指定</text>
+<rect x="595.9" y="72.0" width="206.1" height="71.0" rx="35.5" data-node-id="evidence" fill="#FFF7E8" stroke="#E99525" stroke-width="1.25" filter="url(#generic-card-shadow)"/>
+<rect x="599.9" y="76.0" width="198.1" height="63.0" rx="31.5" fill="none" stroke="#E99525" stroke-opacity="0.35" stroke-width="1"/>
+<text x="698.93" y="95.20" text-anchor="middle" dominant-baseline="middle" font-family="Lantinghei SC, Arial" font-size="16" font-weight="bold" fill="#172033" data-text-box="620.67,84.00,156.53,22.40" data-text-container="609.89,84.00,178.08,47.00" data-text-background="#FFF7E8">研究证据 / Evidence</text>
+<text x="698.93" y="121.20" text-anchor="middle" dominant-baseline="middle" font-family="Lantinghei SC" font-size="14" font-weight="normal" fill="#667085" data-text-box="609.89,111.40,178.08,19.60" data-text-container="609.89,84.00,178.08,47.00" data-text-background="#FFF7E8">报告单位、误差定义和限制</text>
+<rect x="28" y="11" width="4" height="38" rx="2" fill="#3569E8"/>
+<text x="44.00" y="25.00" text-anchor="start" dominant-baseline="middle" font-family="Lantinghei SC, Arial" font-size="20" font-weight="bold" fill="#172033" data-text-box="44.00,11.00,292.20,28.00" data-text-container="44.00,11.00,738.00,28.00" data-text-background="#FFFFFF">数据到证据 / Data to evidence</text>
+<g id="figure-provenance"><rect x="0" y="194" width="826" height="75" fill="#FFFFFF"/>
+<text x="24.00" y="216.50" text-anchor="start" dominant-baseline="middle" font-family="Lantinghei SC" font-size="15" font-weight="bold" fill="#172033" data-text-box="24.00,206.00,63.60,21.00" data-text-container="24.00,206.00,778.00,47.00" data-text-background="#FFFFFF">概念示意</text>
+<text x="24.00" y="242.50" text-anchor="start" dominant-baseline="middle" font-family="Lantinghei SC" font-size="15" font-weight="normal" fill="#667085" data-text-box="24.00,232.00,270.30,21.00" data-text-container="24.00,206.00,778.00,47.00" data-text-background="#FFFFFF">中英混排示例；不代表真实实验结果。</text>
+</g>
+</svg>

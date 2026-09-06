@@ -1,0 +1,318 @@
+{
+  "version": "1.0",
+  "kind": "diagram.neural-network",
+  "title": "Hierarchical multimodal fusion network",
+  "caption": "Parallel visual and language encoders with bidirectional cross-attention, gated fusion, a repeated transformer backbone, and task-specific decoders",
+  "provenance": {
+    "type": "conceptual",
+    "summary": "Illustrative multimodal architecture; tensor dimensions and topology are synthetic and no measured performance is implied."
+  },
+  "nodes": [
+    {
+      "id": "image",
+      "label": "Input image",
+      "subtitle": "B x 3 x 224 x 224",
+      "role": "input",
+      "shape": "tensor",
+      "layer": 0,
+      "group": "vision stream"
+    },
+    {
+      "id": "report",
+      "label": "Text report",
+      "subtitle": "B x T tokens",
+      "role": "input",
+      "shape": "tensor",
+      "layer": 0,
+      "group": "language stream"
+    },
+    {
+      "id": "patches",
+      "label": "Patch embedding",
+      "subtitle": "14 x 14 patches + position",
+      "role": "method",
+      "shape": "tensor",
+      "layer": 1,
+      "group": "vision stream"
+    },
+    {
+      "id": "tokens",
+      "label": "Token embedding",
+      "subtitle": "Vocabulary + position",
+      "role": "method",
+      "shape": "tensor",
+      "layer": 1,
+      "group": "language stream"
+    },
+    {
+      "id": "vision-encoder",
+      "label": "Hierarchical vision encoder",
+      "subtitle": "4 stages x local attention",
+      "role": "compute",
+      "layer": 2,
+      "group": "vision stream"
+    },
+    {
+      "id": "language-encoder",
+      "label": "Language encoder",
+      "subtitle": "6 transformer blocks",
+      "role": "compute",
+      "layer": 2,
+      "group": "language stream"
+    },
+    {
+      "id": "pyramid",
+      "label": "Multi-scale projector",
+      "subtitle": "{56, 28, 14, 7} x D",
+      "role": "method",
+      "layer": 3,
+      "group": "vision stream"
+    },
+    {
+      "id": "context",
+      "label": "Context projector",
+      "subtitle": "B x T x D",
+      "role": "method",
+      "layer": 3,
+      "group": "language stream"
+    },
+    {
+      "id": "vision-cross",
+      "label": "Language-guided vision",
+      "subtitle": "Visual Q x textual K,V",
+      "role": "compute",
+      "layer": 4,
+      "group": "bidirectional co-attention"
+    },
+    {
+      "id": "text-cross",
+      "label": "Vision-guided language",
+      "subtitle": "Textual Q x visual K,V",
+      "role": "compute",
+      "layer": 4,
+      "group": "bidirectional co-attention"
+    },
+    {
+      "id": "vision-add",
+      "label": "Add + norm",
+      "subtitle": "Visual residual",
+      "role": "operation",
+      "shape": "pill",
+      "layer": 5,
+      "group": "residual fusion"
+    },
+    {
+      "id": "text-add",
+      "label": "Add + norm",
+      "subtitle": "Language residual",
+      "role": "operation",
+      "shape": "pill",
+      "layer": 5,
+      "group": "residual fusion"
+    },
+    {
+      "id": "contrastive",
+      "label": "Contrastive alignment",
+      "subtitle": "Shared 256-d space",
+      "role": "decision",
+      "layer": 5,
+      "group": "auxiliary objective"
+    },
+    {
+      "id": "gated-fusion",
+      "label": "Gated feature fusion",
+      "subtitle": "Learned modality weights",
+      "role": "method",
+      "layer": 6,
+      "group": "fusion backbone"
+    },
+    {
+      "id": "latent",
+      "label": "Latent bottleneck",
+      "subtitle": "B x 64 x D",
+      "role": "method",
+      "shape": "tensor",
+      "layer": 7,
+      "group": "fusion backbone"
+    },
+    {
+      "id": "fusion-transformer",
+      "label": "Multimodal transformer x4",
+      "subtitle": "MHSA + FFN + residual",
+      "role": "compute",
+      "layer": 8,
+      "group": "fusion backbone"
+    },
+    {
+      "id": "task-decoder",
+      "label": "Task-token decoder",
+      "subtitle": "8 learned queries",
+      "role": "compute",
+      "layer": 9,
+      "group": "task-specific heads"
+    },
+    {
+      "id": "dense-decoder",
+      "label": "Multi-scale dense decoder",
+      "subtitle": "FPN + upsampling",
+      "role": "compute",
+      "layer": 9,
+      "group": "task-specific heads"
+    },
+    {
+      "id": "classification",
+      "label": "Classification",
+      "subtitle": "B x C probabilities",
+      "role": "output",
+      "shape": "pill",
+      "layer": 10
+    },
+    {
+      "id": "segmentation",
+      "label": "Segmentation mask",
+      "subtitle": "B x K x 224 x 224",
+      "role": "output",
+      "shape": "pill",
+      "layer": 10
+    },
+    {
+      "id": "alignment-loss",
+      "label": "Alignment loss",
+      "subtitle": "InfoNCE objective",
+      "role": "output",
+      "shape": "pill",
+      "layer": 10
+    }
+  ],
+  "edges": [
+    {"id": "image-patches", "from": "image", "to": "patches"},
+    {"id": "patches-vision", "from": "patches", "to": "vision-encoder"},
+    {"id": "vision-pyramid", "from": "vision-encoder", "to": "pyramid"},
+    {"id": "report-tokens", "from": "report", "to": "tokens"},
+    {"id": "tokens-language", "from": "tokens", "to": "language-encoder"},
+    {"id": "language-context", "from": "language-encoder", "to": "context"},
+    {
+      "id": "visual-query",
+      "from": "pyramid",
+      "to": "vision-cross",
+      "label": "Q",
+      "kind": "runtime"
+    },
+    {
+      "id": "text-keys",
+      "from": "context",
+      "to": "vision-cross",
+      "label": "K,V",
+      "kind": "control"
+    },
+    {
+      "id": "text-query",
+      "from": "context",
+      "to": "text-cross",
+      "label": "Q",
+      "kind": "runtime"
+    },
+    {
+      "id": "visual-keys",
+      "from": "pyramid",
+      "to": "text-cross",
+      "label": "K,V",
+      "kind": "control"
+    },
+    {"id": "vision-cross-add", "from": "vision-cross", "to": "vision-add"},
+    {"id": "text-cross-add", "from": "text-cross", "to": "text-add"},
+    {
+      "id": "vision-residual",
+      "from": "pyramid",
+      "to": "vision-add",
+      "label": "skip",
+      "kind": "feedback",
+      "style": "dashed",
+      "source_port": "N",
+      "target_port": "N"
+    },
+    {
+      "id": "text-residual",
+      "from": "context",
+      "to": "text-add",
+      "label": "skip",
+      "kind": "feedback",
+      "style": "dashed",
+      "source_port": "S",
+      "target_port": "S"
+    },
+    {
+      "id": "vision-contrastive",
+      "from": "pyramid",
+      "to": "contrastive",
+      "kind": "evidence"
+    },
+    {
+      "id": "text-contrastive",
+      "from": "context",
+      "to": "contrastive",
+      "kind": "evidence"
+    },
+    {"id": "vision-fuse", "from": "vision-add", "to": "gated-fusion"},
+    {"id": "text-fuse", "from": "text-add", "to": "gated-fusion"},
+    {"id": "fusion-latent", "from": "gated-fusion", "to": "latent"},
+    {"id": "latent-transform", "from": "latent", "to": "fusion-transformer"},
+    {
+      "id": "fusion-residual",
+      "from": "latent",
+      "to": "fusion-transformer",
+      "label": "x4 residual",
+      "kind": "feedback",
+      "style": "dashed",
+      "source_port": "S",
+      "target_port": "S"
+    },
+    {"id": "transform-task", "from": "fusion-transformer", "to": "task-decoder"},
+    {"id": "transform-dense", "from": "fusion-transformer", "to": "dense-decoder"},
+    {
+      "id": "pyramid-dense",
+      "from": "pyramid",
+      "to": "dense-decoder",
+      "label": "multi-scale skip",
+      "kind": "feedback",
+      "style": "dashed",
+      "source_port": "S",
+      "target_port": "S"
+    },
+    {"id": "task-classification", "from": "task-decoder", "to": "classification"},
+    {"id": "dense-segmentation", "from": "dense-decoder", "to": "segmentation"},
+    {
+      "id": "contrastive-loss",
+      "from": "contrastive",
+      "to": "alignment-loss",
+      "label": "auxiliary",
+      "kind": "evidence",
+      "style": "dashed"
+    }
+  ],
+  "style": {
+    "preset": "midnight-technical",
+    "visual_grammar": "semantic",
+    "overrides": {
+      "font_size": 12
+    }
+  },
+  "layout": {
+    "direction": "LR",
+    "medium": "web",
+    "density": "comfortable",
+    "column_gap": 92,
+    "row_gap": 42,
+    "margin": 52,
+    "optimize": false
+  },
+  "output": {
+    "primary": "svg",
+    "additional": ["drawio"]
+  },
+  "assumptions": [
+    "This is an original conceptual architecture created to demonstrate a complex FigureCraft neural-network figure.",
+    "Repeated encoders and the four multimodal transformer blocks are summarized rather than expanded into every internal operation.",
+    "Tensor dimensions are illustrative and should be replaced with dimensions verified from executable model code."
+  ]
+}

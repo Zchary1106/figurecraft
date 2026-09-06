@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "provenance": {"type": "conceptual", "summary": "Example neural graph; no measured performance is implied."},
+  "kind": "diagram.neural-network",
+  "title": "Encoder-classifier network",
+  "view": {"type": "collapsed-publication", "audience": "academic"},
+  "nodes": [
+    {"id": "input", "label": "Input", "subtitle": "B × T × D", "layer": 0, "shape": "tensor"},
+    {"id": "embed", "label": "Token + Position", "subtitle": "Embedding", "layer": 1},
+    {"id": "encoder", "label": "Transformer Encoder", "subtitle": "6 repeated blocks", "layer": 2, "group": "backbone"},
+    {"id": "pool", "label": "Mean Pooling", "subtitle": "Sequence reduction", "layer": 3},
+    {"id": "head", "label": "Linear Classifier", "subtitle": "D → C", "layer": 4},
+    {"id": "output", "label": "Class Probabilities", "subtitle": "B × C", "layer": 5, "shape": "pill"}
+  ],
+  "edges": [
+    {"from": "input", "to": "embed"},
+    {"from": "embed", "to": "encoder"},
+    {"from": "encoder", "to": "pool"},
+    {"from": "pool", "to": "head"},
+    {"from": "head", "to": "output"}
+  ],
+  "style": {"preset": "paper-light"},
+  "layout": {"direction": "LR"},
+  "output": {"primary": "svg"}
+}

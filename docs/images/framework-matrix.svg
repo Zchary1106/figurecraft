@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="857.8" viewBox="0 0 950 857.8" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">Research and engineering workstreams</title>
+<desc id="figure-desc">Complex research framework with 2 phases and 2 tracks</desc>
+<defs>
+<marker id="matrix-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#465364"/></marker>
+<filter id="matrix-panel-shadow" x="-12%" y="-15%" width="124%" height="135%"><feDropShadow dx="0" dy="2.5" stdDeviation="3.5" flood-color="#18202B" flood-opacity="0.09"/></filter>
+<filter id="matrix-card-shadow" x="-12%" y="-16%" width="124%" height="138%"><feDropShadow dx="0" dy="1.5" stdDeviation="2.2" flood-color="#18202B" flood-opacity="0.07"/></filter>
+<linearGradient id="matrix-canvas" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#EEF1F5"/><stop offset="100%" stop-color="#F7F8FA"/></linearGradient>
+<linearGradient id="matrix-outcome" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2463A8"/><stop offset="100%" stop-color="#167B72"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="950" height="794" fill="url(#matrix-canvas)"/>
+<rect x="48.0" y="18" width="5" height="28.0" rx="2.5" fill="#2463A8"/>
+<text x="66.00" y="32.00" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#18202B" data-text-box="66.00,18.00,401.84,28.00" data-text-container="66.00,18.00,836.00,28.00" data-text-background="#F7F8FA">Research and engineering workstreams</text>
+<rect x="246.0" y="92.0" width="270.0" height="62.0" rx="15" fill="#DCE9F6" fill-opacity="0.58" stroke="#2463A8" stroke-opacity="0.82" stroke-width="1.2" filter="url(#matrix-card-shadow)"/>
+<circle cx="268.0" cy="123.0" r="13" fill="#2463A8" fill-opacity="0.94"/>
+<text x="268.0" y="123.5" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="9" font-weight="700">01</text>
+<text x="290.00" y="123.00" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="11.5" font-weight="bold" fill="#18202B" data-text-box="290.00,114.95,40.66,16.10" data-text-container="290.00,102.00,212.00,42.00" data-text-background="#DCE9F6">Design</text>
+<rect x="532.0" y="92.0" width="270.0" height="62.0" rx="15" fill="#D7ECE9" fill-opacity="0.58" stroke="#167B72" stroke-opacity="0.82" stroke-width="1.2" filter="url(#matrix-card-shadow)"/>
+<circle cx="554.0" cy="123.0" r="13" fill="#167B72" fill-opacity="0.94"/>
+<text x="554.0" y="123.5" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="9" font-weight="700">02</text>
+<text x="576.00" y="123.00" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="11.5" font-weight="bold" fill="#18202B" data-text-box="576.00,114.95,50.13,16.10" data-text-container="576.00,102.00,212.00,42.00" data-text-background="#D7ECE9">Evaluate</text>
+<rect x="48.0" y="174.0" width="854.0" height="138.0" rx="18" fill="#DCE9F6" fill-opacity="0.22" stroke="#2463A8" stroke-opacity="0.56" stroke-width="1.2"/>
+<rect x="49.0" y="175.0" width="176.0" height="136.0" rx="17" fill="#DCE9F6" fill-opacity="0.46" stroke="none"/>
+<g data-icon="workflow" aria-hidden="true" transform="translate(70.0 208.0) scale(1.1667)" fill="none" stroke="#2463A8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#2463A8"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M7.2 6H14a4 4 0 0 1 4 4v1M15 8l3 3 3-3"/><path d="M16.8 18H10a4 4 0 0 1-4-4v-1M9 16l-3-3-3 3"/></g>
+<text x="72.00" y="276.00" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2463A8" data-text-box="72.00,266.90,62.08,18.20" data-text-container="72.00,244.00,142.00,64.00" data-text-background="#DCE9F6">Research</text>
+<rect x="48.0" y="324.0" width="854.0" height="138.0" rx="18" fill="#D7ECE9" fill-opacity="0.22" stroke="#167B72" stroke-opacity="0.56" stroke-width="1.2"/>
+<rect x="49.0" y="325.0" width="176.0" height="136.0" rx="17" fill="#D7ECE9" fill-opacity="0.46" stroke="none"/>
+<g data-icon="workflow" aria-hidden="true" transform="translate(70.0 358.0) scale(1.1667)" fill="none" stroke="#167B72" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" color="#167B72"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M7.2 6H14a4 4 0 0 1 4 4v1M15 8l3 3 3-3"/><path d="M16.8 18H10a4 4 0 0 1-4-4v-1M9 16l-3-3-3 3"/></g>
+<text x="72.00" y="426.00" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#101722" data-text-box="72.00,416.90,79.62,18.20" data-text-container="72.00,394.00,142.00,64.00" data-text-background="#D7ECE9">Engineering</text>
+<path data-edge-id="matrix-progression-0-0" d="M 510.000 243.000 L 538.000 243.000" fill="none" stroke="#465364" stroke-width="1.45" marker-end="url(#matrix-arrow)"/>
+<path data-edge-id="matrix-progression-1-0" d="M 510.000 393.000 L 538.000 393.000" fill="none" stroke="#465364" stroke-width="1.45" marker-end="url(#matrix-arrow)"/>
+<path data-edge-id="matrix-cross-0" d="M 381.000 281.000 L 381.000 355.000" fill="none" stroke="#A83D72" stroke-width="1.25" marker-end="url(#matrix-arrow)" stroke-dasharray="6 5"/>
+<rect x="352.00" y="295.10" width="58.00" height="19.90" rx="10" fill="#FFFFFF" stroke="#D5DAE1" stroke-width="0.8"/>
+<text x="381.00" y="305.05" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8.5" font-weight="bold" fill="#A83D72" data-text-box="361.70,299.10,38.59,11.90" data-text-container="361.00,299.10,40.00,11.90" data-text-background="#FFFFFF">specifies</text>
+<path data-edge-id="matrix-cross-1" d="M 667.000 281.000 L 667.000 355.000" fill="none" stroke="#A83D72" stroke-width="1.25" marker-end="url(#matrix-arrow)" stroke-dasharray="6 5"/>
+<rect x="638.00" y="295.10" width="58.00" height="19.90" rx="10" fill="#FFFFFF" stroke="#D5DAE1" stroke-width="0.8"/>
+<text x="667.00" y="305.05" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="8.5" font-weight="bold" fill="#A83D72" data-text-box="650.48,299.10,33.04,11.90" data-text-container="647.00,299.10,40.00,11.90" data-text-background="#FFFFFF">informs</text>
+<rect x="252.0" y="205.0" width="258.0" height="76.0" rx="13" fill="#FFFFFF" stroke="#2463A8" stroke-width="1.25" filter="url(#matrix-card-shadow)"/>
+<text x="381.00" y="243.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#18202B" data-text-box="333.03,235.65,95.95,14.70" data-text-container="266.00,216.00,230.00,54.00" data-text-background="#FFFFFF">Study hypotheses</text>
+<rect x="538.0" y="205.0" width="258.0" height="76.0" rx="13" fill="#FFFFFF" stroke="#2463A8" stroke-width="1.25" filter="url(#matrix-card-shadow)"/>
+<text x="667.00" y="243.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#18202B" data-text-box="618.70,235.65,96.59,14.70" data-text-container="552.00,216.00,230.00,54.00" data-text-background="#FFFFFF">Evaluate evidence</text>
+<rect x="252.0" y="355.0" width="258.0" height="76.0" rx="13" fill="#FFFFFF" stroke="#167B72" stroke-width="1.25" filter="url(#matrix-card-shadow)"/>
+<text x="381.00" y="393.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#18202B" data-text-box="329.31,385.65,103.38,14.70" data-text-container="266.00,366.00,230.00,54.00" data-text-background="#FFFFFF">Implement protocol</text>
+<rect x="538.0" y="355.0" width="258.0" height="76.0" rx="13" fill="#FFFFFF" stroke="#167B72" stroke-width="1.25" filter="url(#matrix-card-shadow)"/>
+<text x="667.00" y="393.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="10.5" font-weight="bold" fill="#18202B" data-text-box="618.09,385.65,97.82,14.70" data-text-container="552.00,366.00,230.00,54.00" data-text-background="#FFFFFF">Reproduce results</text>
+<path data-edge-id="matrix-branch-0" d="M 796.000 243.000 L 856.000 243.000" fill="none" stroke="#2463A8" stroke-width="1.4" stroke-linecap="round"/>
+<circle cx="856.0" cy="243.0" r="4.2" fill="#FFFFFF" stroke="#2463A8" stroke-width="1.4"/>
+<path data-edge-id="matrix-branch-1" d="M 796.000 393.000 L 856.000 393.000" fill="none" stroke="#167B72" stroke-width="1.4" stroke-linecap="round"/>
+<circle cx="856.0" cy="393.0" r="4.2" fill="#FFFFFF" stroke="#167B72" stroke-width="1.4"/>
+<path data-edge-id="matrix-evidence-bus" d="M 856.000 243.000 L 856.000 506.000 L 524.000 506.000 L 524.000 524.000" fill="none" stroke="#465364" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#matrix-arrow)"/>
+<text x="869.0" y="374.5" transform="rotate(-90 869.0 374.5)" text-anchor="middle" fill="#5C6673" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, Helvetica, sans-serif" font-size="8.5" font-weight="700">Evidence bus</text>
+<rect x="238.0" y="524.0" width="572.0" height="86.0" rx="18" fill="#18202B" fill-opacity="1" stroke="#2463A8" stroke-width="1.5" filter="url(#matrix-panel-shadow)"/>
+<text x="260.00" y="567.00" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#FFFFFF" data-text-box="260.00,557.90,121.02,18.20" data-text-container="260.00,539.00,213.40,56.00" data-text-background="#18202B">Integrate evidence</text>
+<rect x="495.4" y="539.0" width="136.3" height="44.0" rx="12" fill="#18202B" stroke="#2463A8" stroke-opacity="0.72" stroke-width="1"/>
+<text x="563.55" y="561.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.2" font-weight="bold" fill="#FFFFFF" data-text-box="546.37,554.56,34.37,12.88" data-text-container="503.40,547.00,120.30,28.00" data-text-background="#18202B">Validity</text>
+<rect x="641.7" y="539.0" width="136.3" height="44.0" rx="12" fill="#18202B" stroke="#2463A8" stroke-opacity="0.72" stroke-width="1"/>
+<text x="709.85" y="561.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="9.2" font-weight="bold" fill="#FFFFFF" data-text-box="674.14,554.56,71.42,12.88" data-text-container="649.70,547.00,120.30,28.00" data-text-background="#18202B">Reproducibility</text>
+<path data-edge-id="matrix-outcome" d="M 524.000 610.000 L 524.000 668.000" fill="none" stroke="#465364" stroke-width="1.8" marker-end="url(#matrix-arrow)"/>
+<rect x="260.0" y="668.0" width="430.0" height="72.0" rx="36.0" fill="url(#matrix-outcome)" stroke="#A83D72" stroke-width="2" filter="url(#matrix-panel-shadow)"/>
+<rect x="265.0" y="673.0" width="420.0" height="62.0" rx="31.0" fill="none" stroke="#A83D72" stroke-opacity="0.32" stroke-width="1"/>
+<text x="475.00" y="704.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12.5" font-weight="bold" fill="#FFFFFF" data-text-box="394.39,695.25,161.22,17.50" data-text-container="284.00,683.00,382.00,42.00" data-text-background="#2463A8">Documented contribution</text>
+<g id="figure-provenance"><rect x="0" y="794" width="950" height="63.8" fill="#F7F8FA"/>
+<text x="24.00" y="813.70" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#18202B" data-text-box="24.00,806.00,126.42,15.40" data-text-container="24.00,806.00,902.00,35.80" data-text-background="#F7F8FA">Conceptual illustration</text>
+<text x="24.00" y="834.10" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="normal" fill="#5C6673" data-text-box="24.00,826.40,307.53,15.40" data-text-container="24.00,806.00,902.00,35.80" data-text-background="#F7F8FA">Illustrative dependencies; not a measured project schedule.</text>
+</g>
+</svg>

@@ -1,0 +1,7 @@
+interface:
+  display_name: "FigureCraft"
+  short_description: "Create precise scientific charts and technical diagrams"
+  brand_color: "#2563EB"
+  default_prompt: "Create a reproducible, publication-quality figure from my inputs."
+policy:
+  allow_implicit_invocation: true
