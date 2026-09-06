@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">FigureCraft icon</title>
+  <desc id="desc">A framed technical figure with a chart curve, data nodes, and a spark.</desc>
+  <defs>
+    <linearGradient id="surface" x1="24" y1="20" x2="232" y2="236" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172554"/>
+      <stop offset="0.52" stop-color="#172554"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="curve" x1="52" y1="178" x2="204" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.55" stop-color="#818CF8"/>
+      <stop offset="1" stop-color="#F0ABFC"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#020617" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect x="20" y="20" width="216" height="216" rx="52" fill="url(#surface)" filter="url(#shadow)"/>
+  <rect x="33" y="33" width="190" height="190" rx="40" fill="none" stroke="#93C5FD" stroke-opacity="0.38" stroke-width="2"/>
+
+  <path d="M57 179H199M57 179V73" fill="none" stroke="#BFDBFE" stroke-opacity="0.48" stroke-linecap="round" stroke-width="4"/>
+  <path d="M58 163C78 154 89 124 109 132C127 139 132 151 146 131C165 103 177 95 199 78" fill="none" stroke="url(#curve)" stroke-linecap="round" stroke-width="9"/>
+
+  <circle cx="58" cy="163" r="8" fill="#38BDF8" stroke="#E0F2FE" stroke-width="3"/>
+  <circle cx="109" cy="132" r="8" fill="#818CF8" stroke="#EDE9FE" stroke-width="3"/>
+  <circle cx="146" cy="131" r="8" fill="#C084FC" stroke="#F3E8FF" stroke-width="3"/>
+  <circle cx="199" cy="78" r="8" fill="#F0ABFC" stroke="#FDF4FF" stroke-width="3"/>
+
+  <path d="M189 45L194.2 58.8L208 64L194.2 69.2L189 83L183.8 69.2L170 64L183.8 58.8Z" fill="#FDE68A"/>
+</svg>

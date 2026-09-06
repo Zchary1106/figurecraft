@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/images/figurecraft-icon.svg" width="96" alt="FigureCraft icon">
+
 # FigureCraft
 
 ### Deterministic scientific charts and technical diagrams for AI coding agents
