@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="152" viewBox="0 0 640 152" role="img" aria-labelledby="title desc">
+  <title id="title">FigureCraft</title>
+  <desc id="desc">FigureCraft wordmark with a chart icon and an editorial technical type treatment.</desc>
+  <defs>
+    <linearGradient id="surface" x1="22" y1="23" x2="122" y2="128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172554"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="curve" x1="41" y1="105" x2="108" y2="53" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.52" stop-color="#818CF8"/>
+      <stop offset="1" stop-color="#F0ABFC"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="18" y="22" width="112" height="112" rx="28" fill="url(#surface)"/>
+  <rect x="26" y="30" width="96" height="96" rx="22" fill="none" stroke="#93C5FD" stroke-opacity="0.38" stroke-width="1.5"/>
+  <path d="M43 108H108M43 108V55" fill="none" stroke="#BFDBFE" stroke-opacity="0.55" stroke-linecap="round" stroke-width="3"/>
+  <path d="M44 98C55 93 62 77 72 82C82 87 85 92 92 81C99 71 104 65 109 58" fill="none" stroke="url(#curve)" stroke-linecap="round" stroke-width="5"/>
+  <circle cx="44" cy="98" r="4.8" fill="#38BDF8" stroke="#E0F2FE" stroke-width="1.7"/>
+  <circle cx="72" cy="82" r="4.8" fill="#818CF8" stroke="#EDE9FE" stroke-width="1.7"/>
+  <circle cx="92" cy="81" r="4.8" fill="#C084FC" stroke="#F3E8FF" stroke-width="1.7"/>
+  <circle cx="109" cy="58" r="4.8" fill="#F0ABFC" stroke="#FDF4FF" stroke-width="1.7"/>
+  <path d="M108 39L110.8 46.2L118 49L110.8 51.8L108 59L105.2 51.8L98 49L105.2 46.2Z" fill="#FDE68A"/>
+
+  <text x="158" y="91" fill="#0F172A" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="800" letter-spacing="-2.3">Figure</text>
+  <text x="324" y="92" fill="#4338CA" font-family="Georgia, Times New Roman, serif" font-size="57" font-weight="700" font-style="italic" letter-spacing="-3.2">Craft</text>
+  <path d="M159 112H495" stroke="#C7D2FE" stroke-width="2" stroke-linecap="round"/>
+  <text x="160" y="132" fill="#475569" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2.7">DETERMINISTIC FIGURES FOR AGENTS</text>
+</svg>

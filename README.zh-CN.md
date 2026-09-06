@@ -1,6 +1,10 @@
 <div align="center">
 
-<h1><img src="docs/images/figurecraft-icon.svg" width="64" alt="FigureCraft 图标" align="center">&nbsp;&nbsp;FigureCraft</h1>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/figurecraft-wordmark-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="docs/images/figurecraft-wordmark-light.svg">
+  <img src="docs/images/figurecraft-wordmark-light.svg" width="360" alt="FigureCraft — Deterministic figures for agents">
+</picture>
 
 ### 面向 AI 编程 Agent 的确定性科研图表与技术图示工具集
 
