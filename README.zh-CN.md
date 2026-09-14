@@ -30,12 +30,31 @@
 
 ## 一句话输入，可复现输出
 
-下面都是真实的 FigureCraft 输出。点击图片即可查看生成该图的仓库内 FigureSpec。
+下面都是真实的 FigureCraft 输出，而不是展示用 Mockup。主示例包含双模态输入流、
+双向交叉注意力、残差融合、重复 Transformer 主干、辅助监督和多个任务输出头。
 
-| Benchmark 结果 | Agent 系统架构 | 神经网络图板 |
-| --- | --- | --- |
-| [![FigureCraft 生成的可发表科研折线图](docs/images/line-chart.svg)](skills/figurecraft/assets/examples/line-chart.json) | [![FigureCraft 生成的证据驱动 Agent 架构](docs/images/agent-evidence-workflow.svg)](skills/figurecraft/assets/examples/agent-evidence-workflow.json) | [![FigureCraft 生成的 CNN 架构图板](docs/images/cnn-architecture.svg)](skills/figurecraft/assets/examples/cnn-architecture.json) |
-| 单位、不确定性、图例与数据检查 | 语义角色、路由连线与可编辑 Draw.io | 张量阶段、残差路径与发表尺寸 |
+<p align="center">
+  <a href="skills/figurecraft/assets/examples/multimodal-fusion-network.json">
+    <img src="docs/images/multimodal-fusion-network.svg" width="100%" alt="复杂的多模态神经网络，包含并行视觉和语言编码器、交叉注意力、残差融合、Transformer 模块和多个输出头">
+  </a>
+</p>
+
+<p align="center"><sub><strong>复杂神经网络架构：</strong>点击图件即可查看完整 FigureSpec。</sub></p>
+
+<table>
+  <tr>
+    <th width="50%">科研图表</th>
+    <th width="50%">Agent 系统架构</th>
+  </tr>
+  <tr>
+    <td><a href="skills/figurecraft/assets/examples/uncertainty-band.json"><img src="docs/images/uncertainty-band.svg" width="100%" alt="FigureCraft 生成的可发表不确定性区间图"></a></td>
+    <td><a href="skills/figurecraft/assets/examples/agent-evidence-workflow.json"><img src="docs/images/agent-evidence-workflow.svg" width="100%" alt="FigureCraft 生成的证据驱动 Agent 架构"></a></td>
+  </tr>
+  <tr>
+    <td>单位、置信区间、图例与数据检查。</td>
+    <td>语义角色、路由连线、溯源信息与可编辑 Draw.io。</td>
+  </tr>
+</table>
 
 ## 一眼了解
 
@@ -143,15 +162,40 @@ output/
 
 ## 示例
 
-下方每张图都由仓库内已提交的 FigureSpec 生成。点击图片可打开其输入文件。
+下方每张图都由仓库内已提交的 FigureSpec 生成。横向结构会使用整行宽度展示，
+确保张量尺寸、重复模块、残差路径与连线语义保持可读。
 
-| 科研图表 | 系统架构 | 研究框架 |
-| --- | --- | --- |
-| [![折线图](docs/images/line-chart.svg)](skills/figurecraft/assets/examples/line-chart.json) | [![证据驱动的 Agent 工作流](docs/images/agent-evidence-workflow.svg)](skills/figurecraft/assets/examples/agent-evidence-workflow.json) | [![研究框架](docs/images/research-framework.svg)](skills/figurecraft/assets/examples/research-framework.json) |
+### 神经网络架构图板
 
-| 神经网络图板 | 流程与计划 | 密集系统全景 |
-| --- | --- | --- |
-| [![CNN 架构](docs/images/cnn-architecture.svg)](skills/figurecraft/assets/examples/cnn-architecture.json) | [![甘特图](docs/images/gantt.svg)](skills/figurecraft/assets/examples/gantt.json) | [![系统全景](docs/images/system-landscape.svg)](skills/figurecraft/assets/examples/system-landscape.json) |
+<p align="center">
+  <a href="skills/figurecraft/assets/examples/cnn-architecture.json">
+    <img src="docs/images/cnn-architecture.svg" width="100%" alt="残差 CNN 架构图板，包含张量几何、阶段重复次数、尺寸变化、残差瓶颈详情和视觉语法">
+  </a>
+</p>
+
+该图完整展示宏观计算路径、准确张量日程、重复阶段、下采样变化、代表性瓶颈模块、
+投影捷径以及用于理解模型的视觉语法。
+
+### 更多图件类型
+
+<table>
+  <tr>
+    <th width="50%">密集系统全景</th>
+    <th width="50%">研究框架</th>
+  </tr>
+  <tr>
+    <td><a href="skills/figurecraft/assets/examples/system-landscape.json"><img src="docs/images/system-landscape.svg" width="100%" alt="FigureCraft 生成的密集系统全景"></a></td>
+    <td><a href="skills/figurecraft/assets/examples/research-framework.json"><img src="docs/images/research-framework.svg" width="100%" alt="FigureCraft 生成的研究框架"></a></td>
+  </tr>
+  <tr>
+    <th>科研对比图</th>
+    <th>角色流程图</th>
+  </tr>
+  <tr>
+    <td><a href="skills/figurecraft/assets/examples/bar-comparison.json"><img src="docs/images/bar-comparison.svg" width="100%" alt="FigureCraft 生成的科研柱状对比图"></a></td>
+    <td><a href="skills/figurecraft/assets/examples/swimlane.json"><img src="docs/images/swimlane.svg" width="100%" alt="FigureCraft 生成的角色泳道流程"></a></td>
+  </tr>
+</table>
 
 全部已提交的输入文件位于 [`skills/figurecraft/assets/examples/`](skills/figurecraft/assets/examples/)。
 
