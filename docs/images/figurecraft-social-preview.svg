@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">FigureCraft — publication-quality figures for AI coding agents</title>
+  <desc id="desc">Social preview with the FigureCraft identity and examples of a chart, system architecture, and neural-network figure.</desc>
+  <defs>
+    <linearGradient id="background" x1="80" y1="36" x2="1200" y2="604" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="0.58" stop-color="#EEF2FF"/>
+      <stop offset="1" stop-color="#FAE8FF"/>
+    </linearGradient>
+    <linearGradient id="brandSurface" x1="76" y1="96" x2="248" y2="272" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172554"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="brandCurve" x1="106" y1="229" x2="216" y2="134" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.52" stop-color="#818CF8"/>
+      <stop offset="1" stop-color="#F0ABFC"/>
+    </linearGradient>
+    <linearGradient id="chartCurve" x1="725" y1="248" x2="919" y2="144" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#312E81" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#background)"/>
+  <circle cx="1190" cy="82" r="180" fill="#C4B5FD" fill-opacity="0.20"/>
+  <circle cx="1090" cy="610" r="230" fill="#67E8F9" fill-opacity="0.13"/>
+
+  <g transform="translate(72 70)">
+    <rect x="0" y="0" width="172" height="172" rx="42" fill="url(#brandSurface)" filter="url(#shadow)"/>
+    <rect x="12" y="12" width="148" height="148" rx="34" fill="none" stroke="#93C5FD" stroke-opacity="0.36" stroke-width="2"/>
+    <path d="M34 132H138M34 132V48" fill="none" stroke="#BFDBFE" stroke-opacity="0.50" stroke-linecap="round" stroke-width="4"/>
+    <path d="M36 119C53 111 63 87 77 94C92 101 97 111 108 94C121 74 130 67 139 57" fill="none" stroke="url(#brandCurve)" stroke-linecap="round" stroke-width="8"/>
+    <circle cx="36" cy="119" r="7" fill="#38BDF8" stroke="#E0F2FE" stroke-width="2"/>
+    <circle cx="77" cy="94" r="7" fill="#818CF8" stroke="#EDE9FE" stroke-width="2"/>
+    <circle cx="108" cy="94" r="7" fill="#C084FC" stroke="#F3E8FF" stroke-width="2"/>
+    <circle cx="139" cy="57" r="7" fill="#F0ABFC" stroke="#FDF4FF" stroke-width="2"/>
+    <path d="M134 23L138 34L149 38L138 42L134 53L130 42L119 38L130 34Z" fill="#FDE68A"/>
+  </g>
+
+  <g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+    <text x="74" y="308" fill="#0F172A" font-size="68" font-weight="800" letter-spacing="-3">Figure</text>
+    <text x="273" y="310" fill="#4338CA" font-family="Georgia, Times New Roman, serif" font-size="75" font-weight="700" font-style="italic" letter-spacing="-4">Craft</text>
+    <text x="76" y="362" fill="#334155" font-size="27" font-weight="650">From one prompt to a figure you can trust.</text>
+    <text x="76" y="408" fill="#64748B" font-size="20">Scientific charts · architecture · neural networks · workflows</text>
+
+    <g transform="translate(74 466)">
+      <rect width="156" height="43" rx="21.5" fill="#E0E7FF"/>
+      <text x="78" y="28" text-anchor="middle" fill="#3730A3" font-size="16" font-weight="700">DETERMINISTIC</text>
+      <rect x="170" width="118" height="43" rx="21.5" fill="#CFFAFE"/>
+      <text x="229" y="28" text-anchor="middle" fill="#155E75" font-size="16" font-weight="700">EDITABLE</text>
+      <rect x="302" width="126" height="43" rx="21.5" fill="#FAE8FF"/>
+      <text x="365" y="28" text-anchor="middle" fill="#86198F" font-size="16" font-weight="700">VALIDATED</text>
+    </g>
+
+    <text x="76" y="568" fill="#475569" font-size="17" font-weight="700">Agent Skills for OpenAI Codex · Claude Code · GitHub Copilot</text>
+  </g>
+
+  <g transform="translate(636 84)" filter="url(#shadow)">
+    <rect x="0" y="0" width="560" height="472" rx="32" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="24" y="24" width="512" height="55" rx="16" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <circle cx="52" cy="51" r="7" fill="#38BDF8"/>
+    <circle cx="76" cy="51" r="7" fill="#818CF8"/>
+    <circle cx="100" cy="51" r="7" fill="#F0ABFC"/>
+    <text x="126" y="58" fill="#475569" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="650">Prompt → FigureSpec → validated delivery</text>
+
+    <g transform="translate(24 103)">
+      <rect width="250" height="160" rx="20" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="20" y="31" fill="#475569" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700">BENCHMARK FIGURE</text>
+      <path d="M36 129H218M36 129V53" fill="none" stroke="#94A3B8" stroke-width="2"/>
+      <path d="M42 115C68 108 78 88 101 94C124 100 139 69 161 76C183 83 196 56 216 49" fill="none" stroke="url(#chartCurve)" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="42" cy="115" r="5" fill="#0EA5E9"/>
+      <circle cx="101" cy="94" r="5" fill="#3B82F6"/>
+      <circle cx="161" cy="76" r="5" fill="#6366F1"/>
+      <circle cx="216" cy="49" r="5" fill="#7C3AED"/>
+    </g>
+
+    <g transform="translate(286 103)">
+      <rect width="250" height="160" rx="20" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="20" y="31" fill="#475569" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700">SYSTEM ARCHITECTURE</text>
+      <rect x="22" y="58" width="66" height="38" rx="10" fill="#DBEAFE" stroke="#60A5FA"/>
+      <rect x="160" y="58" width="66" height="38" rx="10" fill="#EDE9FE" stroke="#A78BFA"/>
+      <rect x="91" y="112" width="68" height="34" rx="10" fill="#CFFAFE" stroke="#22D3EE"/>
+      <path d="M88 77H154" stroke="#64748B" stroke-width="2.5"/>
+      <path d="M125 98V106" stroke="#64748B" stroke-width="2.5"/>
+      <path d="M95 90L112 108M155 90L138 108" stroke="#64748B" stroke-width="2.5"/>
+      <path d="M154 77L146 72V82Z" fill="#64748B"/>
+    </g>
+
+    <g transform="translate(24 279)">
+      <rect width="512" height="165" rx="20" fill="#0F172A"/>
+      <text x="20" y="31" fill="#CBD5E1" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700">NEURAL-NETWORK PLATE</text>
+      <g transform="translate(24 58)" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">
+        <rect width="76" height="58" rx="13" fill="#0C4A6E" stroke="#38BDF8"/>
+        <text x="38" y="26" fill="#E0F2FE">INPUT</text><text x="38" y="44" fill="#7DD3FC">224×224</text>
+        <path d="M82 29H112" stroke="#94A3B8" stroke-width="3"/>
+        <rect x="118" width="76" height="58" rx="13" fill="#312E81" stroke="#818CF8"/>
+        <text x="156" y="26" fill="#E0E7FF">ENCODER</text><text x="156" y="44" fill="#A5B4FC">64 ch</text>
+        <path d="M200 29H230" stroke="#94A3B8" stroke-width="3"/>
+        <rect x="236" width="76" height="58" rx="13" fill="#581C87" stroke="#C084FC"/>
+        <text x="274" y="26" fill="#F3E8FF">FUSION</text><text x="274" y="44" fill="#D8B4FE">256 d</text>
+        <path d="M318 29H348" stroke="#94A3B8" stroke-width="3"/>
+        <rect x="354" width="86" height="58" rx="13" fill="#164E63" stroke="#22D3EE"/>
+        <text x="397" y="26" fill="#CFFAFE">OUTPUT</text><text x="397" y="44" fill="#67E8F9">classes</text>
+        <path d="M112 29L104 24V34ZM230 29L222 24V34ZM348 29L340 24V34Z" fill="#94A3B8"/>
+      </g>
+    </g>
+  </g>
+</svg>

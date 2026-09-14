@@ -1,0 +1,55 @@
+name: Feature request
+description: Propose a new figure family, workflow, exporter, validation rule, or host integration.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the user and the concrete figure or delivery problem.
+      placeholder: Researchers preparing two-column papers need ...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Scientific charts
+        - Architecture diagrams
+        - Neural-network figures
+        - Process diagrams
+        - Research frameworks
+        - Visual critique
+        - Installation or agent integration
+        - Export or delivery artifacts
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: semantics
+    attributes:
+      label: Required semantics
+      description: List the values, relationships, units, uncertainty, ordering, or editing guarantees that must be preserved.
+    validations:
+      required: true
+  - type: input
+    id: medium
+    attributes:
+      label: Final medium
+      description: For example, double-column paper, 16:9 slide, README, poster, or editable Draw.io.
+      placeholder: 85 mm double-column paper figure
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed workflow
+      description: Explain how the request, FigureSpec, renderer, checks, and outputs should work.
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Add links or safe example images that demonstrate the visual grammar, not content to copy.

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: FigureCraft documentation
+    url: https://github.com/Zchary1106/figurecraft#documentation
+    about: Check installation, format, FigureSpec, and workflow documentation first.
