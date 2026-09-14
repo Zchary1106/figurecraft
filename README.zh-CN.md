@@ -6,14 +6,15 @@
   <img src="docs/images/figurecraft-wordmark-light.svg" width="360" alt="FigureCraft — Deterministic figures for agents">
 </picture>
 
-### 面向 AI 编程 Agent 的确定性科研图表与技术图示工具集
+### 用一句提示词生成可发表的科研图表与技术图示
 
-将结构化的 **FigureSpec**、数据或清晰的自然语言需求，转换为可检查、可复现的专业图件，
-而不是一次性的生成图片。
+把提示词、数据文件或结构化 FigureSpec 交给 **OpenAI Codex**、**Claude Code**
+或 **GitHub Copilot**。FigureCraft 会返回经过校验的图件，以及用于检查、编辑
+和复现结果的完整源文件。
 
 [English](README.md) · **简体中文**
 
-[快速开始](#快速开始) · [示例](#示例) · [文档](#文档) · [开发](#开发)
+[5 分钟开始](#快速开始) · [示例画廊](#示例) · [为什么选择 FigureCraft](#为什么选择-figurecraft) · [文档](#文档)
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -21,9 +22,20 @@
 
 </div>
 
-> **它是什么：**一套可移植的 Agent Skill，支持 Claude Code、GitHub Copilot 和 OpenAI Codex。它以确定性布局、校验、溯源信息和可编辑源文件，渲染科研图表与技术图示。
+> **它是什么：**一套可移植的 Agent Skill。它能把“可视化这些实验结果”
+> 或“梳理这个仓库的架构”这样的请求，转成确定、可审查、可交付的图件。
 >
-> **它不是什么：**它不是图片生成包装器，也不是托管的在线画布。定量图表由 Matplotlib 渲染；技术图示由 SVG-first 布局与布线路径引擎渲染。
+> **它不是什么：**它不是图片生成包装器，也不是托管的在线画布。
+> 定量图表由 Matplotlib 渲染；技术图示由 SVG-first 布局与布线路径引擎渲染。
+
+## 一句话输入，可复现输出
+
+下面都是真实的 FigureCraft 输出。点击图片即可查看生成该图的仓库内 FigureSpec。
+
+| Benchmark 结果 | Agent 系统架构 | 神经网络图板 |
+| --- | --- | --- |
+| [![FigureCraft 生成的可发表科研折线图](docs/images/line-chart.svg)](skills/figurecraft/assets/examples/line-chart.json) | [![FigureCraft 生成的证据驱动 Agent 架构](docs/images/agent-evidence-workflow.svg)](skills/figurecraft/assets/examples/agent-evidence-workflow.json) | [![FigureCraft 生成的 CNN 架构图板](docs/images/cnn-architecture.svg)](skills/figurecraft/assets/examples/cnn-architecture.json) |
+| 单位、不确定性、图例与数据检查 | 语义角色、路由连线与可编辑 Draw.io | 张量阶段、残差路径与发表尺寸 |
 
 ## 一眼了解
 
@@ -37,52 +49,62 @@
 
 ## 快速开始
 
-### 1. 安装
+### 1. 安装到 Codex
 
-克隆或下载本仓库后，在仓库根目录运行一条命令。
+克隆仓库，并把 Skills 安装到用户级 Codex Skills 目录。安装器会创建隔离的
+Python 运行时并执行就绪检查。
 
 **macOS**
 
 ```bash
-bash ./install.sh
+git clone https://github.com/Zchary1106/figurecraft.git
+cd figurecraft
+bash ./install.sh --agent codex
 ```
 
 **Windows PowerShell**
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
+git clone https://github.com/Zchary1106/figurecraft.git
+cd figurecraft
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 --agent codex
 ```
 
-该安装程序会为 **Claude Code**、**GitHub Copilot** 和 **OpenAI Codex** 安装共享核心与全部六个专项 Skill，创建隔离的 Python runtime，并执行可用性检查。安装后请重启 Agent 或新开一个会话，让宿主发现新 Skill。
+安装完成后，请重启 Codex 或新建一个任务，让它发现新 Skills。
 
 <details>
-<summary><strong>只安装一个宿主、安装到单个项目，或升级已有安装</strong></summary>
+<summary><strong>安装到 Claude Code、GitHub Copilot、单个项目或升级已有安装</strong></summary>
 
 ```bash
-# 只安装到一个宿主
-bash ./install.sh --agent codex       # 也可使用：claude、copilot
+# 安装到其他受支持宿主
+bash ./install.sh --agent claude      # 也可使用：copilot
+
+# 安装到全部受支持宿主
+bash ./install.sh
 
 # 只在一个项目中可用
-bash ./install.sh --scope project --project "/path/to/project"
+bash ./install.sh --agent codex --scope project --project "/path/to/project"
 
 # 升级安装；自定义副本会被备份而不是直接覆盖
-bash ./install.sh --force
+bash ./install.sh --agent codex --force
 ```
 
 </details>
 
-### 2. 让 Agent 生成图件
+### 2. 粘贴一句请求
+
+```text
+使用 FigureCraft 检查当前仓库并创建一张面向读者的系统架构图。
+只展示主要组件和已经验证的关系。
+请交付 FigureSpec、SVG、可编辑 Draw.io 和适合幻灯片的 PNG。
+```
+
+或者直接从数据开始：
 
 ```text
 使用 FigureCraft，根据 results.csv 创建一张双栏科研误差线图。
 横轴为 epoch，纵轴为 accuracy，误差值为标准差。
 请交付 SVG、300 DPI PNG 和 PDF。
-```
-
-```text
-使用 FigureCraft 绘制一个多 Agent 研究系统架构。
-展示用户请求、规划器、研究 Agent、证据记录、审查者和最终报告。
-请输出可编辑 Draw.io 文件和适合幻灯片的 PNG。
 ```
 
 Agent 会自动选择合适的专项 Skill。你也可以在请求中明确指定 `figurecraft-charts`、`figurecraft-architecture` 或其他专项名称。
@@ -100,6 +122,24 @@ output/
 ├── figure-manifest.json       # 检查、溯源、哈希和环境元数据
 └── index.html                 # 本地预览与交付索引
 ```
+
+## 为什么选择 FigureCraft
+
+大多数 Agent 绘图流程优化的是“尽快得到一张图片”。FigureCraft 优化的是
+“得到一张可以信任、修改和正式交付的图”。
+
+| 工作流 | 快速预览 | 可复现源文件 | 语义校验 | 可编辑矢量图 | 科研检查 |
+| --- | :---: | :---: | :---: | :---: | :---: |
+| 图片生成提示词 | 是 | 否 | 否 | 否 | 否 |
+| 通用图示生成 | 是 | 部分 | 有限 | 部分 | 否 |
+| **FigureCraft** | **是** | **FigureSpec** | **是** | **SVG + Draw.io** | **是** |
+
+- **确定性：**相同 FigureSpec 与环境会生成相同布局。
+- **可检查：**每次交付都包含规范化源文件、溯源、检查结果、哈希和 Manifest。
+- **可编辑：**技术图示可在主 SVG 之外同时交付 Draw.io。
+- **适配媒介：**论文、幻灯片、网页和海报使用明确的尺寸与排版约束。
+- **失败关闭：**数据语义错误、字体缺字、Lint 失败或导出损坏时，不会静默覆盖
+  上一次有效交付。
 
 ## 示例
 
@@ -192,6 +232,7 @@ FigureCraft 的目标是让正确的工作流更容易实现，而不是宣称�
 
 ## 文档
 
+- [贡献指南](CONTRIBUTING.md)
 - [FigureSpec 参考](skills/figurecraft/references/figure-spec.md)
 - [安装与运行时就绪](skills/figurecraft/references/installation.md)
 - [科研图表指南](skills/figurecraft/references/scientific-charts.md)
@@ -201,6 +242,9 @@ FigureCraft 的目标是让正确的工作流更容易实现，而不是宣称�
 - [语言与溯源](skills/figurecraft/references/language-and-provenance.md)
 - [参考图蒸馏](skills/figurecraft/references/reference-distillation.md)
 - [视觉审查量表](skills/figurecraft/references/critique-rubric.md)
+
+新贡献者可以从真实场景 FigureSpec 示例、安装诊断，或排版、路由、校验和导出的
+回归测试开始。请使用仓库 Issue 模板报告可复现问题或提出新的图件类型。
 
 ## 开发
 
